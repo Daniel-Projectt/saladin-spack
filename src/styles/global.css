@@ -44,6 +44,9 @@
   --text-display-xl: clamp(2.25rem, 1.1rem + 4.2vw, 4.25rem);
   --text-display-lg: clamp(1.75rem, 1rem + 2.8vw, 3rem);
   --text-display-md: clamp(1.4rem, 1rem + 1.6vw, 2.2rem);
+  /* Para titulares DENTRO de tarjetas estrechas (tercios de grid):
+     palabras largas (LABORATORIO, MICROCORRUGADO) caben sin partirse */
+  --text-display-sm: clamp(1.2rem, 1rem + 0.8vw, 1.55rem);
 }
 
 /* ============================================================
@@ -102,6 +105,7 @@ body {
 .display-xl { font-size: var(--text-display-xl); }
 .display-lg { font-size: var(--text-display-lg); }
 .display-md { font-size: var(--text-display-md); }
+.display-sm { font-size: var(--text-display-sm); }
 
 /* Cejilla técnica estilo ticket de imprenta */
 .eyebrow {
