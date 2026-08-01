@@ -100,12 +100,12 @@ const jsonLd = [organizationJsonLd(), ...localBusinessJsonLd()];
     <p class="eyebrow text-press-600">{t.clients.eyebrow}</p>
     <h2 class="display display-lg mt-2">{t.clients.title}</h2>
     <p class="mx-auto mt-5 max-w-2xl text-lg text-ink-600">{t.clients.desc}</p>
-    <ul class="mx-auto mt-9 flex max-w-4xl flex-wrap justify-center gap-2.5 pl-0">
+    <ul class="mx-auto mt-11 flex max-w-5xl flex-wrap items-baseline justify-center gap-x-10 gap-y-5 pl-0">
       {t.clients.names.map((name) => (
-        <li class="list-none border border-ink-950/15 bg-paper-white px-3.5 py-1.5 font-mono text-[0.85rem] text-ink-950">{name}</li>
+        <li class="display list-none text-[1.05rem] tracking-wide text-ink-950/60">{name}</li>
       ))}
     </ul>
-    <p class="display mt-10 text-xl text-kraft-700">{t.clients.note}</p>
+    <p class="display mt-12 text-xl text-kraft-700">{t.clients.note}</p>
   </section>
 
   <!-- UN SOCIO QUE ENCAJA -->
