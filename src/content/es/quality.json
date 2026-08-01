@@ -43,6 +43,16 @@
       "id": "fsc",
       "title": "Certificación FSC en proceso (2026)",
       "text": "Estamos en proceso de certificación FSC, esperada para 2026: cadena de custodia verificada del papel y cartón para las marcas que exportan."
+    },
+    {
+      "id": "qa",
+      "title": "Aseguramiento en cada tirada",
+      "text": "Supervisión y controles en arreglos y tiradas completas, auditorías periódicas, Mantenimiento Productivo Total y programas de formación técnica del personal."
+    },
+    {
+      "id": "insumos",
+      "title": "Los mejores insumos y tecnología",
+      "text": "Producimos con líderes mundiales: prensas Heidelberg, tintas Sun Chemical y Epple, cartulinas de Sappi, Stora Enso, CMPC y Klabin, y estándares de color GRACoL/G7."
     }
   ],
   "cta": {

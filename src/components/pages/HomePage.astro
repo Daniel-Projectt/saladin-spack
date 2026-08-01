@@ -95,12 +95,32 @@ const jsonLd = [organizationJsonLd(), ...localBusinessJsonLd()];
     </div>
   </section>
 
-  <!-- MARCAS QUE CONFIARON -->
+  <!-- EMPRESAS QUE CONFÍAN (texto, sin logos de terceros) -->
   <section class="mx-auto max-w-6xl px-4 py-16 text-center md:px-6 md:py-24">
     <p class="eyebrow text-press-600">{t.clients.eyebrow}</p>
     <h2 class="display display-lg mt-2">{t.clients.title}</h2>
     <p class="mx-auto mt-5 max-w-2xl text-lg text-ink-600">{t.clients.desc}</p>
-    <p class="display mt-8 text-xl text-kraft-700">{t.clients.note}</p>
+    <ul class="mx-auto mt-9 flex max-w-4xl flex-wrap justify-center gap-2.5 pl-0">
+      {t.clients.names.map((name) => (
+        <li class="list-none border border-ink-950/15 bg-paper-white px-3.5 py-1.5 font-mono text-[0.85rem] text-ink-950">{name}</li>
+      ))}
+    </ul>
+    <p class="display mt-10 text-xl text-kraft-700">{t.clients.note}</p>
+  </section>
+
+  <!-- UN SOCIO QUE ENCAJA -->
+  <section class="border-y border-ink-950/10 bg-kraft-100/60">
+    <div class="mx-auto max-w-6xl px-4 py-16 md:px-6 md:py-20">
+      <p class="eyebrow text-press-600">{t.partner.eyebrow}</p>
+      <h2 class="display display-lg mt-2">{t.partner.title}</h2>
+      <ul class="mt-9 grid gap-x-8 gap-y-5 pl-0 md:grid-cols-2 lg:grid-cols-3">
+        {t.partner.items.map((item) => (
+          <li class="flex list-none gap-3 border-l-2 border-press-600 pl-4">
+            <span class="text-[1.05rem]">{item}</span>
+          </li>
+        ))}
+      </ul>
+    </div>
   </section>
 
   <!-- CTA FINAL -->

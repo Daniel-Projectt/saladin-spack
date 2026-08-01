@@ -20,7 +20,8 @@ export function organizationJsonLd() {
       addressLocality: company.hq.city,
       addressCountry: 'DO',
     },
-    brand: [{ '@type': 'Brand', name: 'SPACK' }],
+    slogan: 'Turning vision into value',
+    brand: [{ '@type': 'Brand', name: 'SPACK', alternateName: 'Saladin Packaging SRL' }],
   };
 }
 

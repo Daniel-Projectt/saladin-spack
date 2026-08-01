@@ -64,9 +64,46 @@
   },
   "clients": {
     "eyebrow": "Confianza construida en 45+ años",
-    "title": "Marcas que han confiado en nosotros",
-    "desc": "Desde los años 90 hemos producido para líderes como Nestlé, Colgate, Ray-o-Vac (Spectrum Brands), Unilever y Kimberly-Clark. Esa exigencia formó nuestra cultura de calidad.",
+    "title": "Empresas que confían en nosotros",
+    "desc": "De Nestlé, Colgate y Unilever en los años 90 al portafolio que servimos hoy. Construimos relaciones duraderas, no solo órdenes de compra grandes.",
+    "names": [
+      "P&G",
+      "Nestlé",
+      "PepsiCo",
+      "AB InBev",
+      "The Clorox Company",
+      "Hanes Brands",
+      "Taco Bell",
+      "Goya",
+      "Quala",
+      "Essity",
+      "BD",
+      "Jabil",
+      "Hayco",
+      "Turning Point Brands",
+      "Arjo",
+      "AJFA",
+      "Rowe",
+      "Termopac",
+      "Velas Hispaniola",
+      "Caribbean Food Manufacturing",
+      "Rizek Cacao",
+      "Petromóvil",
+      "Bravo",
+      "María"
+    ],
     "note": "¿Tu marca es la próxima?"
+  },
+  "partner": {
+    "eyebrow": "Por qué producir con nosotros",
+    "title": "Un socio que encaja",
+    "items": [
+      "Ventaja logística por ubicación geográfica",
+      "Lead times cortos: soluciones just-in-time para crecer",
+      "Acceso fácil a Norteamérica y el Caribe",
+      "Estabilidad política y económica de República Dominicana",
+      "Reconocimiento local, red de negocios y reputación de familia"
+    ]
   },
   "finalCta": {
     "title": "Si lo puedes imaginar, lo podemos hacer realidad",
