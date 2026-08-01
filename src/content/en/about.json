@@ -15,32 +15,38 @@
       {
         "year": "1979",
         "title": "Founded",
-        "text": "Eduardo Saladín Zacarías founds the company in the folding-carton business, with 3 employees, from his home garage."
+        "text": "Eduardo Saladín Zacarías founds the company in the folding-carton business, with 3 employees, from his home garage.",
+        "ghost": "GARAGE"
       },
       {
         "year": "The '90s",
         "title": "The big brands arrive",
-        "text": "Nestlé, Colgate, Ray-o-Vac (Spectrum Brands), Unilever and Kimberly-Clark join the client roster. Multinational standards shape our own."
+        "text": "Nestlé, Colgate, Ray-o-Vac (Spectrum Brands), Unilever and Kimberly-Clark join the client roster. Multinational standards shape our own.",
+        "ghost": "BRANDS"
       },
       {
         "year": "1992",
         "title": "Colgate alliance",
-        "text": "We sign a strategic alliance with Colgate, a milestone that consolidates our position in folding cartons."
+        "text": "We sign a strategic alliance with Colgate, a milestone that consolidates our position in folding cartons.",
+        "ghost": "COLGATE"
       },
       {
         "year": "1998",
         "title": "Acquisition and a new course",
-        "text": "We fully acquire the folding-carton division. From 1998 to 2009 we also focus on commercial and editorial printing."
+        "text": "We fully acquire the folding-carton division. From 1998 to 2009 we also focus on commercial and editorial printing.",
+        "ghost": "EDITORIAL"
       },
       {
         "year": "2010",
         "title": "Reinvesting in cartons",
-        "text": "We double down on folding cartons, modernizing capabilities and processes."
+        "text": "We double down on folding cartons, modernizing capabilities and processes.",
+        "ghost": "COMEBACK"
       },
       {
         "year": "2022–2025",
         "title": "SPACK and litho-lamination",
-        "text": "We expand into the Las Américas Free Trade Zone industrial park to produce high-quality litho-laminated packaging. SPACK, our export packaging brand, is born."
+        "text": "We expand into the Las Américas Free Trade Zone industrial park to produce high-quality litho-laminated packaging. SPACK, our export packaging brand, is born.",
+        "ghost": "SPACK"
       }
     ]
   },

@@ -15,32 +15,38 @@
       {
         "year": "1979",
         "title": "Fundación",
-        "text": "Eduardo Saladín Zacarías funda la empresa en el sector de cajas plegadizas, con 3 empleados, desde el garaje de su casa."
+        "text": "Eduardo Saladín Zacarías funda la empresa en el sector de cajas plegadizas, con 3 empleados, desde el garaje de su casa.",
+        "ghost": "GARAJE"
       },
       {
         "year": "Años 90",
         "title": "Las grandes marcas llegan",
-        "text": "Nestlé, Colgate, Ray-o-Vac (Spectrum Brands), Unilever y Kimberly-Clark se suman a la cartera de clientes. La exigencia multinacional moldea nuestros estándares."
+        "text": "Nestlé, Colgate, Ray-o-Vac (Spectrum Brands), Unilever y Kimberly-Clark se suman a la cartera de clientes. La exigencia multinacional moldea nuestros estándares.",
+        "ghost": "MARCAS"
       },
       {
         "year": "1992",
         "title": "Alianza con Colgate",
-        "text": "Firmamos una alianza estratégica con Colgate, un hito que consolida nuestra posición en empaques plegadizos."
+        "text": "Firmamos una alianza estratégica con Colgate, un hito que consolida nuestra posición en empaques plegadizos.",
+        "ghost": "COLGATE"
       },
       {
         "year": "1998",
         "title": "Adquisición y nuevo rumbo",
-        "text": "Adquirimos por completo la división de plegadizos. Entre 1998 y 2009 nos enfocamos también en impresión comercial y editorial."
+        "text": "Adquirimos por completo la división de plegadizos. Entre 1998 y 2009 nos enfocamos también en impresión comercial y editorial.",
+        "ghost": "EDITORIAL"
       },
       {
         "year": "2010",
         "title": "Reinversión en plegadizos",
-        "text": "Volvemos a apostar fuerte por el empaque plegadizo, modernizando capacidades y procesos."
+        "text": "Volvemos a apostar fuerte por el empaque plegadizo, modernizando capacidades y procesos.",
+        "ghost": "REGRESO"
       },
       {
         "year": "2022–2025",
         "title": "SPACK y el litolaminado",
-        "text": "Expandimos al Parque Industrial de Zona Franca Las Américas para producir empaque litolaminado de alta calidad. Nace SPACK, nuestra marca de packaging de exportación."
+        "text": "Expandimos al Parque Industrial de Zona Franca Las Américas para producir empaque litolaminado de alta calidad. Nace SPACK, nuestra marca de packaging de exportación.",
+        "ghost": "SPACK"
       }
     ]
   },

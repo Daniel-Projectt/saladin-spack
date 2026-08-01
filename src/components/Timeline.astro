@@ -10,14 +10,12 @@ import CalibrationBar from '~/components/CalibrationBar.astro';
 interface Props {
   eyebrow: string;
   title: string;
-  milestones: { year: string; title: string; text: string }[];
+  milestones: { year: string; title: string; text: string; ghost?: string }[];
 }
 
 const { eyebrow, title, milestones } = Astro.props;
 
 const total = String(milestones.length).padStart(2, '0');
-/** Año corto para el fantasma de fondo ("Años 90" → "90", "2022–2025" → "2022"). */
-const ghostOf = (year: string) => year.match(/\d{2,4}/)?.[0] ?? '';
 ---
 
 <section class="border-y border-ink-950/10 bg-kraft-100/60">
@@ -52,7 +50,7 @@ const ghostOf = (year: string) => year.match(/\d{2,4}/)?.[0] ?? '';
                   <p class="mt-1.5 text-ink-600">{m.text}</p>
                 </div>
               </div>
-              <span class="ghost-year hidden shrink-0 lg:block" aria-hidden="true">{ghostOf(m.year)}</span>
+              {m.ghost && <span class="ghost-year hidden shrink-0 lg:block" aria-hidden="true">{m.ghost}</span>}
             </div>
           </li>
         ))}

@@ -207,12 +207,12 @@ body {
   background: var(--color-press-600);
 }
 
-/* Año fantasma: solo contorno, como número de plancha de imprenta */
+/* Palabra fantasma de cada era: solo contorno, como plancha de imprenta */
 .ghost-year {
   font-family: var(--font-display);
   font-variation-settings: 'wdth' 125;
   font-weight: 800;
-  font-size: clamp(5rem, 11vw, 10rem);
+  font-size: clamp(2.5rem, 5vw, 4rem);
   line-height: 1;
   white-space: nowrap;
   color: transparent;
