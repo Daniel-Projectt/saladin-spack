@@ -27,6 +27,10 @@ const pageKey = productPageKeys[productId];
 const quoteHref = `${path('contact', lang)}?${lang === 'es' ? 'producto' : 'product'}=${productId}`;
 const isSpack = productId === 'litolaminado';
 
+/* Las specs marcadas [REEMPLAZAR]/[REPLACE] son datos pendientes del cliente:
+   viven en el JSON pero NUNCA se sirven en el HTML. */
+const specs = p.specs.filter((s) => !/\[(REEMPLAZAR|REPLACE)/i.test(s.value));
+
 const jsonLd = [
   productJsonLd({
     name: p.name,
@@ -80,7 +84,7 @@ const jsonLd = [
     <div class="mt-6 max-w-3xl overflow-x-auto border border-ink-950/15 bg-paper-white">
       <table class="w-full border-collapse font-mono text-[0.9rem]">
         <tbody>
-          {p.specs.map((spec) => (
+          {specs.map((spec) => (
             <tr class="border-b border-ink-950/10 last:border-b-0">
               <th scope="row" class="w-40 px-4 py-3 text-left align-top uppercase tracking-wider text-press-600">{spec.label}</th>
               <td class="px-4 py-3">{spec.value}</td>
