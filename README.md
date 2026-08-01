@@ -16,7 +16,8 @@ npm run preview    # sirve dist/ en local
 Recomendado: **Cloudflare Pages** (gratis, CDN global, soporta `_redirects`) o **Vercel**.
 
 - Build command: `npm run build` · Output: `dist`
-- El archivo `public/_redirects` ya redirige `/` → `/es/` con 301.
+- El archivo `public/_redirects` ya redirige `/` → `/es/` con 301 (Cloudflare/Netlify; en GitHub Pages la raíz usa meta-refresh estático).
+- **Preview actual:** GitHub Pages en https://daniel-projectt.github.io/saladin-spack/ (build con `DEPLOY_TARGET=gh`: base `/saladin-spack`, canonical a github.io y `noindex`). `public/robots.txt` solo es válido en producción (apunta el sitemap a saladinig.com); GitHub Pages lo sirve pero el `noindex` de las páginas manda.
 
 ## Dónde se edita cada cosa
 
@@ -30,15 +31,23 @@ Recomendado: **Cloudflare Pages** (gratis, CDN global, soporta `_redirects`) o *
 | Timeline de 45 años (hitos) | `src/content/{es,en}/about.json` → `timeline.milestones` |
 | Placeholders de fotos | `src/components/PlaceholderImage.astro` (sustituir por `<picture>` AVIF/WebP reales manteniendo `width`/`height`) |
 
-## ⚠️ Lista de [REEMPLAZAR] pendientes
+## ⚠️ Datos pendientes (Sección B de la auditoría)
 
-1. **Hex del manual de marca** — `src/styles/global.css` (`--color-ink-950`, `--color-paper`, `--color-press-600`, `--color-spack-500`). La paleta actual es provisional.
-2. **Número de WhatsApp Business** — `src/data/company.ts` (`whatsapp` y `whatsappHref`, hoy `+1809XXXXXXX`).
-3. **Endpoint del formulario** — `src/components/RFQForm.astro` (`FORM_ENDPOINT`, hoy `https://formspree.io/f/REEMPLAZAR`). Crear el form en Formspree (soporta adjuntos) o wirear Resend.
-4. **Dominio final** — si no es `saladinig.com`: `astro.config.mjs` (`SITE`), `src/data/company.ts` (`site`) y `public/robots.txt`.
-5. **Especificaciones técnicas reales** — `src/content/{es,en}/products.json`: sustratos/acabados de plegadizas y tecnologías/materiales de etiquetas están marcados `[REEMPLAZAR]`.
-6. **Mapeo de URLs viejas** — a qué página nueva apunta cada `?page_id=` (ver checklist).
-7. **Pin exacto de los mapas** — `src/data/company.ts` (`mapQuery` de cada sede) si el embed genérico no cae en el punto correcto.
+> El código ya está preparado para recibirlos: nada de esto aparece en el HTML servido mientras falte (`grep -r "REEMPLAZAR\|XXXXXXX" dist/` → vacío). Al poner cada valor, la funcionalidad reaparece sola.
+
+| # | Dato | Quién lo consigue | Archivo : línea | Efecto al ponerlo |
+|---|---|---|---|---|
+| B1 | Número WhatsApp Business | Dueño del proyecto | `src/data/company.ts:14-15` (`whatsapp`, `whatsappHref`, hoy `null`) | Reaparecen botón flotante + líneas de footer/contacto |
+| B2 | Endpoint Formspree | Requiere cuenta con email real (ideal servicioalcliente@) | `src/components/RFQForm.astro:22` (`FORM_ENDPOINT`) | El formulario pasa de "en configuración" a envío real con estados. Hacer 1 envío de prueba. Adjuntos de 10 MB = plan pago de Formspree (decisión de presupuesto) |
+| B3a | Logos oficiales (SVG/AI) | Los entrega Saladín | `src/components/Header.astro` y `Footer.astro` (wordmark "⌖SALADÍN"; mantener texto en `aria-label`) | Marca real en header/footer |
+| B3b | Hex del manual de marca | Los entrega Saladín | `src/styles/global.css:11,18,28,32` (`--color-ink-950`, `--color-paper`, `--color-press-600`, `--color-spack-500`) | 4 valores repintan todo el sitio |
+| B4 | Fotos reales de planta/producto | Sesión de fotos con el cliente | `src/assets/stock/` + `src/data/stockImages.ts` (lista de tomas abajo); reescribir `alt` en `src/content/{es,en}/home.json` y `products.json` | Sustituyen el stock de Pexels |
+| B5a | Specs técnicas de plegadizas y etiquetas | Cliente | `src/content/es/products.json:41-42,114-116` (+ espejo EN) — hoy filtradas del HTML | Aparecen filas nuevas en las tablas de specs |
+| B5b | Autorización de marcas (Nestlé, Colgate…) | Cliente | `src/content/{es,en}/home.json` (sección `clients`) | Hoy solo texto histórico; con autorización, logos |
+| B5c | Dominio final (¿saladinig.com?) | Cliente | `astro.config.mjs:7` (`SITE`) + `src/data/company.ts:17` (`site`) + `public/robots.txt` | Canonical/sitemap/JSON-LD al dominio real |
+| B5d | Horario de atención | Confirmar con cliente (directorios dicen L–J 8:00–17:30, V 8:00–16:30) | `src/content/{es,en}/contact.json` (agregar al bloque `direct`) | Se muestra en Contacto |
+| — | Pin exacto de mapas | Verificar en el preview | `src/data/company.ts` (`mapQuery` de cada sede) | Mapa cae en el punto correcto |
+| — | Mapeo 301 de URLs viejas | Abrir cada `?page_id=` antes de apagar WordPress | Checklist de lanzamiento (abajo) | Redirects en Cloudflare |
 
 ## 📷 Fotos que debe entregar el cliente
 
@@ -70,7 +79,7 @@ Recomendado: **Cloudflare Pages** (gratis, CDN global, soporta `_redirects`) o *
 
 ## ✅ Checklist de lanzamiento
 
-- [ ] Reemplazar los 7 puntos de la lista `[REEMPLAZAR]`
+- [ ] Completar la tabla "Datos pendientes" (arriba)
 - [ ] Sustituir placeholders por fotos reales (AVIF/WebP, mantener `width`/`height`)
 - [ ] Apuntar el dominio `saladinig.com` al hosting (Cloudflare Pages: agregar custom domain)
 - [ ] **Redirects 301 de las URLs viejas de WordPress** — son query strings, así que en Cloudflare se hacen con *Redirect Rules* (no con `_redirects`):
@@ -80,9 +89,15 @@ Recomendado: **Cloudflare Pages** (gratis, CDN global, soporta `_redirects`) o *
   - (Abrir cada URL vieja antes de apagar WordPress para ver qué contenido tenía y mapearla.)
 - [ ] Google Search Console: verificar propiedad, enviar `sitemap-index.xml`
 - [ ] Google Business Profile: crear/reclamar fichas de **ambas sedes** (Herrera y Las Américas) con el mismo NAP del sitio
-- [ ] Probar el formulario RFQ end-to-end (incluyendo adjunto) y el botón de WhatsApp con el número real
+- [ ] Probar el formulario RFQ end-to-end (envío real por Formspree) y el botón de WhatsApp con el número real
 - [ ] Correr Lighthouse sobre el sitio publicado (objetivo ≥95 en las 4 categorías) — el sitio es estático, sin JS de framework; lo único externo son los iframes de Google Maps (ya con `loading="lazy"`)
 - [ ] Revisar hreflang en Search Console (ES default + EN)
+
+## Estado de la auditoría (jul-2026)
+
+**Hecho (Sección A):** canonical/hreflang/og:url/BreadcrumbList correctos en ambos targets (A1/A7) · imágenes por astro:assets con AVIF/WebP y todas las variantes <200 KB (A2) · og:image por defecto + twitter:card (A3) · formulario con fetch, estados accesibles, honeypot, fecha mínima y modo seguro sin endpoint (A4) · WhatsApp oculto hasta tener número (A5) · alt descriptivos separados del label interno (A6) · galería sin foto repetida, specs pendientes fuera del HTML, redirect raíz verificado en gh (A8) · tarjeta FSC en Calidad (C2).
+
+**Pendiente:** todo lo de la tabla "Datos pendientes" (Sección B — requiere datos del dueño o del cliente) · C1 (OG por producto, usar prop `ogImage`) · C3 (prototipo de caja-dieline en el hero, en rama aparte si se decide explorar).
 
 ## Estructura
 
