@@ -69,7 +69,9 @@ export function productJsonLd(opts: { name: string; description: string; url: st
   };
 }
 
-export function breadcrumbJsonLd(items: { label: string; href?: string }[]) {
+/** `site` = origen del build actual (Astro.site), para que las URLs existan en ambos targets. */
+export function breadcrumbJsonLd(items: { label: string; href?: string }[], site: string = SITE) {
+  const origin = site.replace(/\/$/, '');
   return {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
@@ -77,7 +79,7 @@ export function breadcrumbJsonLd(items: { label: string; href?: string }[]) {
       '@type': 'ListItem',
       position: i + 1,
       name: item.label,
-      ...(item.href ? { item: `${SITE}${item.href}` } : {}),
+      ...(item.href ? { item: `${origin}${item.href}` } : {}),
     })),
   };
 }

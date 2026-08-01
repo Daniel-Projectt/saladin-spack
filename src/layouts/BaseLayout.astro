@@ -26,9 +26,13 @@ interface Props {
 const { lang, pageKey, title, description, jsonLd = [] } = Astro.props;
 const t = lang === 'es' ? commonEs : commonEn;
 
-const canonical = `${company.site}${path(pageKey, lang)}`;
-const alternateEs = `${company.site}${path(pageKey, 'es')}`;
-const alternateEn = `${company.site}${path(pageKey, 'en')}`;
+/* Site real del build actual (astro.config lo define por target):
+   producción → saladinig.com · preview → daniel-projectt.github.io.
+   path() ya incluye el base path, así las URLs absolutas existen SIEMPRE. */
+const site = (Astro.site?.href ?? company.site).replace(/\/$/, '');
+const canonical = `${site}${path(pageKey, lang)}`;
+const alternateEs = `${site}${path(pageKey, 'es')}`;
+const alternateEn = `${site}${path(pageKey, 'en')}`;
 
 /* Vista previa en GitHub Pages: no indexar (el dominio real será saladinig.com) */
 const isPreview = process.env.DEPLOY_TARGET === 'gh';
