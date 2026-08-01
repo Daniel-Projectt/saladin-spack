@@ -48,6 +48,11 @@
         "PHOTO: die-cutter in operation",
         "PHOTO: close-up of an offset-printed carton"
       ],
+      "galleryAlts": [
+        "Kraft folding carton with a black printed logo",
+        "Industrial press printing at the plant",
+        "Close-up of printing machinery in operation"
+      ],
       "cta": {
         "title": "Quote your folding cartons",
         "desc": "Send us your artwork or your idea; our structural development team proposes the right carton."
@@ -80,6 +85,11 @@
         "PHOTO: laminator / litho-lamination process",
         "PHOTO: litho-laminated point-of-sale display"
       ],
+      "galleryAlts": [
+        "Stacked corrugated boxes ready for dispatch",
+        "Close-up of corrugated board texture",
+        "Cardboard boxes with lids on an orange background"
+      ],
       "cta": {
         "title": "Quote your litho-laminated packaging",
         "desc": "Tell us what travels inside and where it's headed: we recommend the right flute and structure."
@@ -110,6 +120,11 @@
         "PHOTO: printed adhesive label rolls",
         "PHOTO: label press in operation",
         "PHOTO: labeled client products (with authorization)"
+      ],
+      "galleryAlts": [
+        "Kraft containers with fruit adhesive labels",
+        "Candle jar with a blank adhesive label",
+        "Glass jars with spice labels"
       ],
       "cta": {
         "title": "Quote your adhesive labels",

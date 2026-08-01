@@ -1,31 +1,31 @@
 /**
  * Imágenes de stock PROVISIONALES (licencia Pexels, uso libre).
- * Sustituir por las fotos reales del cliente manteniendo estas rutas
- * o actualizando este archivo. Créditos/IDs Pexels en el README.
+ * Viven en src/assets/stock/ para pasar por el pipeline de Astro
+ * (AVIF/WebP, widths responsivos). Al recibir las fotos reales del
+ * cliente: sustituir los archivos manteniendo nombres, o actualizar
+ * estos imports. Créditos/IDs Pexels en el README.
  */
+import type { ImageMetadata } from 'astro';
 import type { ProductId } from '~/i18n/routes';
-import { withBase } from '~/lib/base';
 
-const base = withBase('/images/stock');
+import prensaOffset from '~/assets/stock/prensa-offset.jpg';
+import almacenCajas from '~/assets/stock/almacen-cajas.jpg';
+import cajaImpresa from '~/assets/stock/caja-impresa.jpg';
+import maquinaIndustrial from '~/assets/stock/maquina-industrial.jpg';
+import detalleImpresion from '~/assets/stock/detalle-impresion.jpg';
+import cajasCarton from '~/assets/stock/cajas-carton.jpg';
+import texturaCorrugado from '~/assets/stock/textura-corrugado.jpg';
+import cajasTapas from '~/assets/stock/cajas-tapas.jpg';
+import envasesEtiquetados from '~/assets/stock/envases-etiquetados.jpg';
+import etiquetaBlanca from '~/assets/stock/etiqueta-blanca.jpg';
+import frascosEtiquetados from '~/assets/stock/frascos-etiquetados.jpg';
 
 export const stockImages = {
-  heroPress: `${base}/prensa-offset.jpg`,
-  spackPlant: `${base}/almacen-cajas.jpg`,
+  heroPress: prensaOffset,
+  spackPlant: almacenCajas,
   products: {
-    plegadizas: [
-      `${base}/caja-impresa.jpg`,
-      `${base}/maquina-industrial.jpg`,
-      `${base}/detalle-impresion.png`,
-    ],
-    litolaminado: [
-      `${base}/cajas-carton.jpg`,
-      `${base}/textura-corrugado.jpg`,
-      `${base}/cajas-tapas.jpg`,
-    ],
-    etiquetas: [
-      `${base}/envases-etiquetados.jpg`,
-      `${base}/etiqueta-blanca.jpg`,
-      `${base}/frascos-etiquetados.jpg`,
-    ],
-  } satisfies Record<ProductId, string[]>,
+    plegadizas: [cajaImpresa, maquinaIndustrial, detalleImpresion],
+    litolaminado: [cajasCarton, texturaCorrugado, cajasTapas],
+    etiquetas: [envasesEtiquetados, etiquetaBlanca, frascosEtiquetados],
+  } satisfies Record<ProductId, ImageMetadata[]>,
 };

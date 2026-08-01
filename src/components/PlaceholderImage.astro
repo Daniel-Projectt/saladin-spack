@@ -1,21 +1,42 @@
 ---
 /**
- * Placeholder de foto: SVG generado con la proporción correcta y la etiqueta
- * de qué foto va ahí. Sustituir por <picture> con AVIF/WebP reales al recibir
- * las fotos del cliente (mantener width/height para evitar CLS).
+ * Imagen del sitio con dos modos:
+ * — Con `src` (ImageMetadata de src/assets): renderiza <Picture> optimizado
+ *   (AVIF/WebP + fallback JPG, widths 480/800/1200) recortado a la proporción
+ *   del diseño. `alt` descriptivo es OBLIGATORIO en este modo.
+ * — Sin `src`: genera un placeholder SVG con la proporción correcta y la
+ *   etiqueta interna de qué foto va ahí (`label`), que hace de alt.
  */
+import { Picture } from 'astro:assets';
+import type { ImageMetadata } from 'astro';
+
 interface Props {
   label: string;
+  alt?: string;
   width?: number;
   height?: number;
   variant?: 'light' | 'dark' | 'kraft';
   eager?: boolean;
   class?: string;
-  /** Foto real (stock provisional o del cliente). Si se pasa, no se genera el SVG. */
-  src?: string;
+  src?: ImageMetadata;
+  sizes?: string;
 }
 
-const { label, width = 1200, height = 800, variant = 'light', eager = false, class: className = '', src: realSrc } = Astro.props;
+const {
+  label,
+  alt,
+  width = 1200,
+  height = 800,
+  variant = 'light',
+  eager = false,
+  class: className = '',
+  src: realSrc,
+  sizes = '(min-width: 1024px) 50vw, 100vw',
+} = Astro.props;
+
+if (realSrc && !alt) {
+  throw new Error(`PlaceholderImage: falta el prop "alt" descriptivo para la imagen real (label: "${label}")`);
+}
 
 const palettes = {
   light: { bg: '#e9e5da', fg: '#5c6779', frame: '#c6c0b0' },
@@ -26,18 +47,36 @@ const p = palettes[variant];
 
 const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}" viewBox="0 0 ${width} ${height}"><rect width="${width}" height="${height}" fill="${p.bg}"/><rect x="12" y="12" width="${width - 24}" height="${height - 24}" fill="none" stroke="${p.frame}" stroke-width="3" stroke-dasharray="14 10"/><g stroke="${p.fg}" stroke-width="2"><line x1="${width / 2 - 26}" y1="${height / 2 - 44}" x2="${width / 2 + 26}" y2="${height / 2 - 44}"/><line x1="${width / 2}" y1="${height / 2 - 70}" x2="${width / 2}" y2="${height / 2 - 18}"/><circle cx="${width / 2}" cy="${height / 2 - 44}" r="15" fill="none"/></g><text x="50%" y="${height / 2 + 22}" text-anchor="middle" fill="${p.fg}" font-family="monospace" font-size="${Math.max(16, Math.round(width / 46))}" letter-spacing="2">${label.replace(/&/g, '&amp;').replace(/</g, '&lt;')}</text></svg>`;
 
-const src = `data:image/svg+xml;charset=utf-8,${encodeURIComponent(svg)}`;
+const placeholderSrc = `data:image/svg+xml;charset=utf-8,${encodeURIComponent(svg)}`;
 ---
 
-<picture class={className}>
-  <img
-    src={realSrc ?? src}
-    alt={label}
-    width={width}
-    height={height}
-    loading={eager ? 'eager' : 'lazy'}
-    decoding="async"
-    class:list={['w-full max-w-full', realSrc ? 'object-cover' : 'h-auto']}
-    style={realSrc ? `aspect-ratio: ${width} / ${height}; height: auto;` : undefined}
-  />
-</picture>
+{
+  realSrc ? (
+    <Picture
+      src={realSrc}
+      formats={['avif', 'webp']}
+      fallbackFormat="jpg"
+      widths={[480, 800, 1200]}
+      width={1200}
+      quality={70}
+      sizes={sizes}
+      alt={alt ?? label}
+      loading={eager ? 'eager' : 'lazy'}
+      decoding="async"
+      class:list={['w-full max-w-full object-cover', className]}
+      style={`aspect-ratio: ${width} / ${height}; height: auto;`}
+    />
+  ) : (
+    <picture class={className}>
+      <img
+        src={placeholderSrc}
+        alt={label}
+        width={width}
+        height={height}
+        loading={eager ? 'eager' : 'lazy'}
+        decoding="async"
+        class="h-auto w-full max-w-full"
+      />
+    </picture>
+  )
+}

@@ -56,7 +56,7 @@ const jsonLd = [
       <p class="mt-6 max-w-2xl text-lg text-ink-600">{p.intro}</p>
       <a href={quoteHref} class="btn btn-press mt-8">{t.quoteCta}</a>
     </div>
-    <PlaceholderImage label={p.gallery[0]} width={800} height={700} variant={isSpack ? 'kraft' : 'light'} eager src={stockImages.products[productId][0]} />
+    <PlaceholderImage label={p.gallery[0]} alt={p.galleryAlts[0]} width={800} height={700} variant={isSpack ? 'kraft' : 'light'} eager src={stockImages.products[productId][0]} sizes="(min-width: 1024px) 40vw, 100vw" />
   </section>
 
   <!-- INDUSTRIAS -->
@@ -102,8 +102,18 @@ const jsonLd = [
   <section class="mx-auto max-w-6xl px-4 pb-14 md:px-6 md:pb-20">
     <h2 class="display display-md">{t.galleryLabel}</h2>
     <div class="mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      {/* La galería usa las fotos 2 y 3 (la 1 ya es el hero de arriba);
+          la posición sin foto vuelve al placeholder etiquetado. */}
       {p.gallery.map((label, i) => (
-        <PlaceholderImage label={label} width={800} height={600} variant={isSpack ? 'kraft' : 'light'} src={stockImages.products[productId][i]} />
+        <PlaceholderImage
+          label={label}
+          alt={p.galleryAlts[i + 1]}
+          width={800}
+          height={600}
+          variant={isSpack ? 'kraft' : 'light'}
+          src={stockImages.products[productId][i + 1]}
+          sizes="(min-width: 640px) 33vw, 100vw"
+        />
       ))}
     </div>
   </section>

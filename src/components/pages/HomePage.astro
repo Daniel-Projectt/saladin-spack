@@ -35,7 +35,7 @@ const jsonLd = [organizationJsonLd(), ...localBusinessJsonLd()];
           <a href={path('products', lang)} class="btn btn-outline-light">{c.cta.seeProducts}</a>
         </div>
       </div>
-      <PlaceholderImage label={t.hero.imageLabel} width={900} height={1000} variant="dark" eager src={stockImages.heroPress} />
+      <PlaceholderImage label={t.hero.imageLabel} alt={t.hero.imageAlt} width={900} height={1000} variant="dark" eager src={stockImages.heroPress} sizes="(min-width: 1024px) 45vw, 100vw" />
     </div>
     <CalibrationBar />
   </section>
@@ -63,7 +63,7 @@ const jsonLd = [organizationJsonLd(), ...localBusinessJsonLd()];
           href={path(productPageKeys[item.id as ProductId], lang)}
           class="group block border border-ink-950/15 bg-paper-white no-underline transition-colors hover:border-press-600"
         >
-          <PlaceholderImage label={item.imageLabel} width={800} height={600} variant="light" src={stockImages.products[item.id as ProductId][0]} />
+          <PlaceholderImage label={item.imageLabel} alt={item.imageAlt} width={800} height={600} variant="light" src={stockImages.products[item.id as ProductId][0]} sizes="(min-width: 768px) 33vw, 100vw" />
           <div class="p-6">
             <p class="eyebrow text-press-600">{item.num} <span aria-hidden="true">⌖</span></p>
             <h3 class="display display-md mt-2 text-ink-950">{item.title}</h3>
@@ -91,7 +91,7 @@ const jsonLd = [organizationJsonLd(), ...localBusinessJsonLd()];
         </ul>
         <a href={path('product-litolaminado', lang)} class="btn btn-outline-dark mt-8">{t.spack.cta}</a>
       </div>
-      <PlaceholderImage label={lang === 'es' ? 'FOTO: planta SPACK Las Américas' : 'PHOTO: SPACK Las Américas plant'} width={900} height={700} variant="kraft" src={stockImages.spackPlant} />
+      <PlaceholderImage label={t.spack.imageLabel} alt={t.spack.imageAlt} width={900} height={700} variant="kraft" src={stockImages.spackPlant} />
     </div>
   </section>
 

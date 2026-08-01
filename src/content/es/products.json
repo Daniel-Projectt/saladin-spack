@@ -48,6 +48,11 @@
         "FOTO: troqueladora en operación",
         "FOTO: detalle de impresión offset de un estuche"
       ],
+      "galleryAlts": [
+        "Caja plegadiza de cartón kraft con logotipo impreso en negro",
+        "Prensa industrial imprimiendo en la planta",
+        "Detalle de maquinaria de impresión en operación"
+      ],
       "cta": {
         "title": "Cotiza tus cajas plegadizas",
         "desc": "Envíanos tu arte o tu idea; nuestro equipo de desarrollo estructural te propone el estuche correcto."
@@ -80,6 +85,11 @@
         "FOTO: laminadora / proceso de litolaminado",
         "FOTO: display de punto de venta litolaminado"
       ],
+      "galleryAlts": [
+        "Cajas de cartón corrugado apiladas listas para despacho",
+        "Textura de cartón corrugado en primer plano",
+        "Cajas de cartón con tapas sobre fondo naranja"
+      ],
       "cta": {
         "title": "Cotiza tu empaque litolaminado",
         "desc": "Dinos qué producto viaja dentro y a dónde: te recomendamos la flauta y la estructura correctas."
@@ -110,6 +120,11 @@
         "FOTO: rollos de etiquetas adhesivas impresas",
         "FOTO: prensa de etiquetas en operación",
         "FOTO: productos etiquetados de clientes (con autorización)"
+      ],
+      "galleryAlts": [
+        "Envases kraft con etiquetas adhesivas de frutas",
+        "Frasco de vela con etiqueta adhesiva en blanco",
+        "Frascos de vidrio con etiquetas de especias"
       ],
       "cta": {
         "title": "Cotiza tus etiquetas adhesivas",

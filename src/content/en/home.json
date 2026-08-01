@@ -7,7 +7,8 @@
     "eyebrow": "Since 1979 · Santo Domingo, Dominican Republic",
     "title": "Packaging that prints value",
     "subtitle": "We pioneered litho-laminated corrugated packaging in the Dominican Republic. Three plants, 120 employees and 45+ years turning our clients' vision into packaging that sells.",
-    "imageLabel": "PHOTO: offset press running, Herrera plant"
+    "imageLabel": "PHOTO: offset press running, Herrera plant",
+    "imageAlt": "Industrial offset press printing packaging sheets in color"
   },
   "trust": {
     "items": [
@@ -27,21 +28,24 @@
         "num": "01",
         "title": "Printed folding cartons",
         "desc": "Offset-printed paperboard cartons for food, pharma and consumer goods. Our origin in 1979 and our lifelong specialty.",
-        "imageLabel": "PHOTO: finished folding cartons, several industries"
+        "imageLabel": "PHOTO: finished folding cartons, several industries",
+        "imageAlt": "Kraft folding carton with a printed logo"
       },
       {
         "id": "litolaminado",
         "num": "02",
         "title": "Litho-laminated micro-corrugated board",
         "desc": "High-quality offset printing laminated onto micro-corrugated board in E, B and C flutes. Produced at our SPACK plant in the Las Américas Free Trade Zone.",
-        "imageLabel": "PHOTO: finished litho-laminated boxes, Las Américas plant"
+        "imageLabel": "PHOTO: finished litho-laminated boxes, Las Américas plant",
+        "imageAlt": "Stacked corrugated boxes ready for dispatch"
       },
       {
         "id": "etiquetas",
         "num": "03",
         "title": "Adhesive labels",
         "desc": "Pressure-sensitive labels that complete your product's packaging system, with the same G7 color control as everything we print.",
-        "imageLabel": "PHOTO: printed adhesive label rolls"
+        "imageLabel": "PHOTO: printed adhesive label rolls",
+        "imageAlt": "Kraft containers with colorful adhesive labels"
       }
     ]
   },
@@ -54,7 +58,9 @@
       "Free-trade-zone regime, ideal for exporting clients",
       "In-house structural design and development"
     ],
-    "cta": "Explore litho-lamination"
+    "cta": "Explore litho-lamination",
+    "imageLabel": "PHOTO: SPACK Las Américas plant",
+    "imageAlt": "Industrial warehouse with racking full of cardboard boxes"
   },
   "clients": {
     "eyebrow": "Trust built over 45+ years",

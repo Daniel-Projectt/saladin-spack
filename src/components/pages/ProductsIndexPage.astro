@@ -41,7 +41,7 @@ const ids: ProductId[] = ['plegadizas', 'litolaminado', 'etiquetas'];
       const homeItem = home.products.items.find((x) => x.id === id);
       return (
         <article class="grid items-center gap-8 border border-ink-950/15 bg-paper-white p-6 md:p-8 lg:grid-cols-[1fr_1.2fr]">
-          <PlaceholderImage label={homeItem?.imageLabel ?? p.name} width={800} height={600} variant={id === 'litolaminado' ? 'kraft' : 'light'} src={stockImages.products[id][0]} />
+          <PlaceholderImage label={homeItem?.imageLabel ?? p.name} alt={homeItem?.imageAlt ?? p.name} width={800} height={600} variant={id === 'litolaminado' ? 'kraft' : 'light'} src={stockImages.products[id][0]} sizes="(min-width: 1024px) 40vw, 100vw" />
           <div>
             <p class="eyebrow text-press-600">0{i + 1} <span aria-hidden="true">⌖</span></p>
             <h2 class="display display-md mt-2">{p.name}</h2>
