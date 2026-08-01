@@ -1,0 +1,30 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "products": "Products",
+    "quality": "Quality",
+    "sustainability": "Sustainability",
+    "contact": "Contact"
+  },
+  "cta": {
+    "quote": "Request a quote",
+    "seeProducts": "See products"
+  },
+  "langSwitch": "Español",
+  "skipLink": "Skip to main content",
+  "breadcrumbHome": "Home",
+  "whatsapp": {
+    "label": "Message us on WhatsApp",
+    "message": "Hello, I would like a packaging quote from Saladín."
+  },
+  "footer": {
+    "tagline": "Turning vision into value since 1979.",
+    "hqLabel": "Headquarters",
+    "spackLabel": "SPACK plant · Free Trade Zone",
+    "contactLabel": "Contact",
+    "navLabel": "Site map",
+    "certLine": "ISO 9001:2015 since 2014 · G7 color management · FSC certification in progress (2026)",
+    "legal": "Saladín Industria Gráfica. All rights reserved."
+  }
+}

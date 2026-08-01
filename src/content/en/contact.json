@@ -1,0 +1,53 @@
+{
+  "meta": {
+    "title": "Contact & quotes | Saladín Industria Gráfica",
+    "description": "Request your quote for folding cartons, litho-laminated packaging or adhesive labels. Tel +1 809-530-0101 · servicioalcliente@saladinig.com · Santo Domingo, Dominican Republic."
+  },
+  "hero": {
+    "eyebrow": "Contact / Quote",
+    "title": "Tell us what we're packing",
+    "subtitle": "Fill in what you know about your project — with or without artwork. We reply with a technical and commercial proposal."
+  },
+  "form": {
+    "name": "Full name",
+    "company": "Company",
+    "email": "Email",
+    "phone": "Phone",
+    "productType": "Product type",
+    "productOptions": [
+      { "value": "plegadizas", "label": "Printed folding cartons" },
+      { "value": "litolaminado", "label": "Litho-laminated micro-corrugated board" },
+      { "value": "etiquetas", "label": "Adhesive labels" },
+      { "value": "otro", "label": "Other / not sure yet" }
+    ],
+    "quantity": "Estimated quantity",
+    "quantityPlaceholder": "E.g.: 10,000 units",
+    "dimensions": "Approximate dimensions",
+    "dimensionsPlaceholder": "E.g.: 20 × 12 × 8 cm",
+    "targetDate": "Target delivery date",
+    "message": "Message",
+    "messagePlaceholder": "Product to pack, destination market, desired finishes…",
+    "attachment": "Attach artwork or dieline (optional)",
+    "attachmentHint": "PDF, AI or image. Max 10 MB.",
+    "submit": "Send quote request",
+    "requiredNote": "* Required fields",
+    "successNote": "Thank you — your request was sent. We'll be in touch shortly."
+  },
+  "direct": {
+    "title": "Direct, no form",
+    "phoneLabel": "Phone",
+    "emailLabel": "Email",
+    "whatsappLabel": "WhatsApp Business"
+  },
+  "locations": {
+    "title": "Our locations",
+    "hq": {
+      "title": "Saladín Industria Gráfica",
+      "mapTitle": "Map: Saladín headquarters, Herrera Industrial Zone"
+    },
+    "spack": {
+      "title": "SPACK · Las Américas Free Trade Zone",
+      "mapTitle": "Map: SPACK plant, Las Américas Free Trade Zone"
+    }
+  }
+}

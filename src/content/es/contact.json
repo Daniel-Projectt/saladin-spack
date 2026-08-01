@@ -1,0 +1,53 @@
+{
+  "meta": {
+    "title": "Contacto y cotización | Saladín Industria Gráfica",
+    "description": "Solicita tu cotización de cajas plegadizas, empaque litolaminado o etiquetas adhesivas. Tel +1 809-530-0101 · servicioalcliente@saladinig.com · Santo Domingo, República Dominicana."
+  },
+  "hero": {
+    "eyebrow": "Contacto / Cotizar",
+    "title": "Cuéntanos qué vamos a empacar",
+    "subtitle": "Completa el formulario con lo que sepas de tu proyecto — con un arte o sin él. Te respondemos con una propuesta técnica y comercial."
+  },
+  "form": {
+    "name": "Nombre completo",
+    "company": "Empresa",
+    "email": "Correo electrónico",
+    "phone": "Teléfono",
+    "productType": "Tipo de producto",
+    "productOptions": [
+      { "value": "plegadizas", "label": "Cajas plegadizas impresas" },
+      { "value": "litolaminado", "label": "Cartón microcorrugado litolaminado" },
+      { "value": "etiquetas", "label": "Etiquetas adhesivas" },
+      { "value": "otro", "label": "Otro / no estoy seguro" }
+    ],
+    "quantity": "Cantidad estimada",
+    "quantityPlaceholder": "Ej.: 10,000 unidades",
+    "dimensions": "Dimensiones aproximadas",
+    "dimensionsPlaceholder": "Ej.: 20 × 12 × 8 cm",
+    "targetDate": "Fecha objetivo de entrega",
+    "message": "Mensaje",
+    "messagePlaceholder": "Producto a empacar, mercado de destino, acabados deseados…",
+    "attachment": "Adjuntar arte o dieline (opcional)",
+    "attachmentHint": "PDF, AI o imagen. Máx. 10 MB.",
+    "submit": "Enviar solicitud de cotización",
+    "requiredNote": "* Campos obligatorios",
+    "successNote": "Gracias — tu solicitud fue enviada. Te contactaremos en breve."
+  },
+  "direct": {
+    "title": "Directo, sin formulario",
+    "phoneLabel": "Teléfono",
+    "emailLabel": "Correo",
+    "whatsappLabel": "WhatsApp Business"
+  },
+  "locations": {
+    "title": "Nuestras sedes",
+    "hq": {
+      "title": "Saladín Industria Gráfica",
+      "mapTitle": "Mapa: sede Saladín, Zona Industrial de Herrera"
+    },
+    "spack": {
+      "title": "SPACK · Zona Franca Las Américas",
+      "mapTitle": "Mapa: planta SPACK, Zona Franca Las Américas"
+    }
+  }
+}

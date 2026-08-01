@@ -1,0 +1,120 @@
+{
+  "meta": {
+    "title": "Productos | Plegadizas, litolaminado y etiquetas — Saladín Industria Gráfica",
+    "description": "Cajas plegadizas impresas, cartón microcorrugado litolaminado en flautas E, B y C, y etiquetas adhesivas. Fabricados en República Dominicana con gestión de color G7 e ISO 9001:2015."
+  },
+  "hero": {
+    "eyebrow": "Productos",
+    "title": "Tres maneras de empacar valor",
+    "subtitle": "Todo lo que fabricamos comparte la misma base: diseño estructural in-house, gestión de color G7 y un sistema de calidad ISO 9001:2015."
+  },
+  "quoteCta": "Solicitar cotización",
+  "detailCta": "Ver detalle",
+  "industriesLabel": "Aplicaciones por industria",
+  "specsLabel": "Especificaciones",
+  "galleryLabel": "Galería",
+  "capabilitiesLabel": "Respaldado por",
+  "sharedCapabilities": [
+    "Diseño estructural y desarrollo in-house",
+    "Gestión de color G7 in-house",
+    "Laboratorio de pruebas",
+    "Sistema de calidad ISO 9001:2015"
+  ],
+  "items": {
+    "plegadizas": {
+      "name": "Cajas plegadizas impresas",
+      "shortName": "Plegadizas",
+      "meta": {
+        "title": "Cajas plegadizas impresas en República Dominicana | Saladín",
+        "description": "Estuches plegadizos de cartulina impresos en offset para alimentos, farma, consumo masivo y bebidas. 45+ años de especialización, ISO 9001:2015 y color G7. Cotiza tu empaque plegadizo."
+      },
+      "intro": "El producto que nos vio nacer en 1979. Estuches de cartulina impresos en offset, troquelados y pegados, que protegen tu producto y lo hacen destacar en anaquel.",
+      "industries": [
+        { "name": "Alimentos", "desc": "Estuches para productos secos, congelados y de despensa." },
+        { "name": "Farmacéutica", "desc": "Empaque secundario con la trazabilidad que exige el sector." },
+        { "name": "Consumo masivo", "desc": "Cuidado personal y del hogar, de la góndola al hogar." },
+        { "name": "Bebidas", "desc": "Estuches y multiempaques para bebidas y licores." },
+        { "name": "Exportación", "desc": "Empaques listos para viajar y cumplir en mercados exigentes." }
+      ],
+      "specs": [
+        { "label": "Proceso", "value": "Impresión offset + troquelado + pegado" },
+        { "label": "Sustratos", "value": "[REEMPLAZAR: cartulinas y calibres que trabajan]" },
+        { "label": "Acabados", "value": "[REEMPLAZAR: barnices, laminados y acabados disponibles]" },
+        { "label": "Color", "value": "Gestión de color G7 in-house" },
+        { "label": "Desarrollo", "value": "Diseño estructural y dielines in-house" }
+      ],
+      "gallery": [
+        "FOTO: estuches plegadizos de alimentos terminados",
+        "FOTO: troqueladora en operación",
+        "FOTO: detalle de impresión offset de un estuche"
+      ],
+      "cta": {
+        "title": "Cotiza tus cajas plegadizas",
+        "desc": "Envíanos tu arte o tu idea; nuestro equipo de desarrollo estructural te propone el estuche correcto."
+      }
+    },
+    "litolaminado": {
+      "name": "Cartón microcorrugado litolaminado",
+      "shortName": "Litolaminado",
+      "meta": {
+        "title": "Cajas litolaminadas (flautas E, B y C) | SPACK by Saladín",
+        "description": "Pioneros del litolaminado corrugado en República Dominicana. Impresión offset de alta calidad laminada a microcorrugado en flautas E, B y C, desde Zona Franca Las Américas. Ideal para exportación."
+      },
+      "intro": "Impresión offset de alta gráfica laminada sobre cartón microcorrugado: la resistencia del corrugado con el acabado de una plegadiza. Somos pioneros de esta tecnología en República Dominicana y la producimos en nuestra planta SPACK de Zona Franca Las Américas.",
+      "industries": [
+        { "name": "Alimentos", "desc": "Cajas exhibidoras y de despacho con gráfica de anaquel." },
+        { "name": "Bebidas", "desc": "Multiempaques resistentes con imagen premium." },
+        { "name": "Consumo masivo", "desc": "Empaques club-pack y displays de punto de venta." },
+        { "name": "Exportación", "desc": "Protección de tránsito largo sin sacrificar la marca." },
+        { "name": "Farmacéutica", "desc": "Empaque secundario robusto para volúmenes de exportación." }
+      ],
+      "specs": [
+        { "label": "Flauta E", "value": "Perfil fino: máxima calidad gráfica y precisión de troquel" },
+        { "label": "Flauta B", "value": "Equilibrio entre resistencia a compresión y acabado" },
+        { "label": "Flauta C", "value": "Mayor amortiguación para cargas y tránsitos exigentes" },
+        { "label": "Proceso", "value": "Offset de alta calidad + laminado a microcorrugado" },
+        { "label": "Planta", "value": "SPACK · Zona Franca Las Américas, Nave A7" }
+      ],
+      "gallery": [
+        "FOTO: cajas litolaminadas terminadas, planta Las Américas",
+        "FOTO: laminadora / proceso de litolaminado",
+        "FOTO: display de punto de venta litolaminado"
+      ],
+      "cta": {
+        "title": "Cotiza tu empaque litolaminado",
+        "desc": "Dinos qué producto viaja dentro y a dónde: te recomendamos la flauta y la estructura correctas."
+      }
+    },
+    "etiquetas": {
+      "name": "Etiquetas adhesivas",
+      "shortName": "Etiquetas",
+      "meta": {
+        "title": "Etiquetas adhesivas en Santo Domingo | Saladín Industria Gráfica",
+        "description": "Etiquetas autoadhesivas impresas con gestión de color G7 para alimentos, bebidas, farma y consumo masivo en República Dominicana. Completa tu sistema de empaque con Saladín."
+      },
+      "intro": "La pieza que cierra el sistema: etiquetas autoadhesivas con el mismo control de color G7 que tus estuches y cajas, para que tu marca se vea igual en todos los puntos de contacto.",
+      "industries": [
+        { "name": "Alimentos", "desc": "Etiquetas para envases rígidos y flexibles." },
+        { "name": "Bebidas", "desc": "Etiquetas que resisten frío, humedad y manipulación." },
+        { "name": "Farmacéutica", "desc": "Etiquetado legible y consistente para el sector salud." },
+        { "name": "Consumo masivo", "desc": "Series y versiones con color consistente entre lotes." },
+        { "name": "Exportación", "desc": "Cumplimiento de rotulado para mercados internacionales." }
+      ],
+      "specs": [
+        { "label": "Proceso", "value": "[REEMPLAZAR: tecnologías de impresión de etiquetas]" },
+        { "label": "Materiales", "value": "[REEMPLAZAR: sustratos y adhesivos disponibles]" },
+        { "label": "Acabados", "value": "[REEMPLAZAR: barnices, laminados, estampados]" },
+        { "label": "Color", "value": "Gestión de color G7 in-house" }
+      ],
+      "gallery": [
+        "FOTO: rollos de etiquetas adhesivas impresas",
+        "FOTO: prensa de etiquetas en operación",
+        "FOTO: productos etiquetados de clientes (con autorización)"
+      ],
+      "cta": {
+        "title": "Cotiza tus etiquetas adhesivas",
+        "desc": "Cuéntanos el envase, el entorno (frío, humedad, exportación) y las cantidades; te proponemos material y acabado."
+      }
+    }
+  }
+}

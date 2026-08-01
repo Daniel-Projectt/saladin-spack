@@ -1,0 +1,87 @@
+---
+import BaseLayout from '~/layouts/BaseLayout.astro';
+import Breadcrumbs from '~/components/Breadcrumbs.astro';
+import RFQForm from '~/components/RFQForm.astro';
+import type { Lang } from '~/i18n/routes';
+import { path } from '~/i18n/routes';
+import { company } from '~/data/company';
+import { localBusinessJsonLd } from '~/lib/seo';
+import contactEs from '~/content/es/contact.json';
+import contactEn from '~/content/en/contact.json';
+import commonEs from '~/content/es/common.json';
+import commonEn from '~/content/en/common.json';
+
+interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+const t = lang === 'es' ? contactEs : contactEn;
+const c = lang === 'es' ? commonEs : commonEn;
+---
+
+<BaseLayout lang={lang} pageKey="contact" title={t.meta.title} description={t.meta.description} jsonLd={localBusinessJsonLd()}>
+  <div class="mx-auto max-w-6xl px-4 pt-8 md:px-6">
+    <Breadcrumbs items={[{ label: c.breadcrumbHome, href: path('home', lang) }, { label: c.nav.contact }]} />
+  </div>
+
+  <section class="mx-auto max-w-6xl px-4 py-12 md:px-6 md:py-16">
+    <p class="eyebrow text-press-600">{t.hero.eyebrow}</p>
+    <h1 class="display display-xl mt-3 max-w-4xl">{t.hero.title}</h1>
+    <p class="mt-6 max-w-3xl text-lg text-ink-600">{t.hero.subtitle}</p>
+  </section>
+
+  <section class="mx-auto grid max-w-6xl gap-12 px-4 pb-20 md:px-6 lg:grid-cols-[1.5fr_1fr]">
+    <div class="border border-ink-950/15 bg-paper-white p-6 md:p-8">
+      <RFQForm lang={lang} />
+    </div>
+
+    <aside>
+      <h2 class="display display-md">{t.direct.title}</h2>
+      <ul class="mt-5 list-none space-y-4 pl-0">
+        <li>
+          <p class="eyebrow text-ink-600">{t.direct.phoneLabel}</p>
+          <a href={`tel:${company.phoneHref}`} class="text-lg font-bold text-ink-950 no-underline hover:text-press-600">{company.phone}</a>
+        </li>
+        <li>
+          <p class="eyebrow text-ink-600">{t.direct.emailLabel}</p>
+          <a href={`mailto:${company.email}`} class="break-all text-lg font-bold text-ink-950 no-underline hover:text-press-600">{company.email}</a>
+        </li>
+        <li>
+          <p class="eyebrow text-ink-600">{t.direct.whatsappLabel}</p>
+          <a href={company.whatsappHref} rel="noopener" class="text-lg font-bold text-ink-950 no-underline hover:text-press-600">{company.whatsapp}</a>
+        </li>
+      </ul>
+
+      <h2 class="display display-md mt-10">{t.locations.title}</h2>
+      <div class="mt-5 space-y-6">
+        <div class="border border-ink-950/15 bg-paper-white">
+          <iframe
+            src={`https://www.google.com/maps?q=${company.hq.mapQuery}&output=embed`}
+            title={t.locations.hq.mapTitle}
+            loading="lazy"
+            class="h-44 w-full border-0"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+          <div class="p-4">
+            <p class="font-bold">{t.locations.hq.title}</p>
+            <p class="mt-1 text-[0.9rem] text-ink-600">{company.hq.street}, {company.hq.city}</p>
+          </div>
+        </div>
+        <div class="border border-kraft-400 bg-kraft-100">
+          <iframe
+            src={`https://www.google.com/maps?q=${company.spack.mapQuery}&output=embed`}
+            title={t.locations.spack.mapTitle}
+            loading="lazy"
+            class="h-44 w-full border-0"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+          <div class="p-4">
+            <p class="font-bold">{t.locations.spack.title}</p>
+            <p class="mt-1 text-[0.9rem] text-ink-950/70">{company.spack.street}, {company.spack.city}</p>
+          </div>
+        </div>
+      </div>
+    </aside>
+  </section>
+</BaseLayout>

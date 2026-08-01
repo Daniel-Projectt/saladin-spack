@@ -1,0 +1,47 @@
+{
+  "meta": {
+    "title": "Quality & capabilities | ISO 9001, G7, lab — Saladín Industria Gráfica",
+    "description": "ISO 9001:2015 management system since 2014, in-house G7 color management, in-house structural design, testing laboratory and a Business Continuity Plan. This is how we guarantee every run."
+  },
+  "hero": {
+    "eyebrow": "Quality & capabilities",
+    "title": "The only way to produce the best is to use the best",
+    "subtitle": "Quality here is not a slogan: it's a certified, measured system installed at every stage — from dieline to delivery."
+  },
+  "sections": [
+    {
+      "id": "iso",
+      "title": "ISO 9001:2015 since 2014",
+      "text": "Our quality management system has been certified since 2014. Documented, audited, continuously improving processes across all three plants."
+    },
+    {
+      "id": "g7",
+      "title": "In-house G7 color management",
+      "text": "We calibrate and control color with G7 methodology in-house. Your Pantone looks the same on the first run and on run number fifty."
+    },
+    {
+      "id": "estructural",
+      "title": "In-house structural design and development",
+      "text": "Our own packaging engineering: dielines, prototypes and custom structures matched to the product, the filling line and the client's logistics."
+    },
+    {
+      "id": "lab",
+      "title": "Testing laboratory",
+      "text": "We verify materials and finished packaging in our own laboratory before they reach your line."
+    },
+    {
+      "id": "bcp",
+      "title": "Business Continuity Plan (BCP)",
+      "text": "Your supply chain doesn't stop: we maintain a formal BCP to keep serving you through contingencies."
+    },
+    {
+      "id": "plantas",
+      "title": "3 plants + warehouse · 97,000 ft²",
+      "text": "Real installed capacity: three production plants plus warehouse, with 120 employees, between Herrera and the Las Américas Free Trade Zone."
+    }
+  ],
+  "cta": {
+    "title": "We put this system to work for your brand",
+    "button": "Request a quote"
+  }
+}

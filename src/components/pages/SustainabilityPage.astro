@@ -1,0 +1,47 @@
+---
+import BaseLayout from '~/layouts/BaseLayout.astro';
+import Breadcrumbs from '~/components/Breadcrumbs.astro';
+import type { Lang } from '~/i18n/routes';
+import { path } from '~/i18n/routes';
+import susEs from '~/content/es/sustainability.json';
+import susEn from '~/content/en/sustainability.json';
+import commonEs from '~/content/es/common.json';
+import commonEn from '~/content/en/common.json';
+
+interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+const t = lang === 'es' ? susEs : susEn;
+const c = lang === 'es' ? commonEs : commonEn;
+---
+
+<BaseLayout lang={lang} pageKey="sustainability" title={t.meta.title} description={t.meta.description}>
+  <div class="mx-auto max-w-6xl px-4 pt-8 md:px-6">
+    <Breadcrumbs items={[{ label: c.breadcrumbHome, href: path('home', lang) }, { label: c.nav.sustainability }]} />
+  </div>
+
+  <section class="mx-auto max-w-6xl px-4 py-12 md:px-6 md:py-16">
+    <p class="eyebrow text-press-600">{t.hero.eyebrow}</p>
+    <h1 class="display display-xl mt-3 max-w-4xl">{t.hero.title}</h1>
+    <p class="mt-6 max-w-3xl text-lg text-ink-600">{t.hero.subtitle}</p>
+  </section>
+
+  <section class="flute-texture bg-kraft-100 py-14 md:py-20">
+    <div class="mx-auto grid max-w-6xl gap-6 px-4 md:grid-cols-3 md:px-6">
+      {t.sections.map((s) => (
+        <article class="border border-kraft-400 bg-paper-white p-6">
+          <h2 class="display display-md">{s.title}</h2>
+          <p class="mt-3 text-ink-600">{s.text}</p>
+        </article>
+      ))}
+    </div>
+  </section>
+
+  <section class="mx-auto max-w-4xl px-4 py-16 text-center md:px-6 md:py-20">
+    <h2 class="display display-lg">{t.cta.title}</h2>
+    <p class="mx-auto mt-4 max-w-xl text-lg text-ink-600">{t.cta.desc}</p>
+    <a href={path('contact', lang)} class="btn btn-press mt-8">{t.cta.button}</a>
+  </section>
+</BaseLayout>

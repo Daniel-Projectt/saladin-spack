@@ -1,0 +1,66 @@
+{
+  "meta": {
+    "title": "Nosotros | 45+ años de historia — Saladín Industria Gráfica",
+    "description": "Fundada en 1979 por Eduardo Saladín Zacarías, Saladín Industria Gráfica pasó de un garaje con 3 empleados a 3 plantas, 120 colaboradores y la vanguardia del litolaminado en República Dominicana."
+  },
+  "hero": {
+    "eyebrow": "Nuestra historia",
+    "title": "Del garaje a la zona franca",
+    "subtitle": "En 1979, Eduardo Saladín Zacarías comenzó a fabricar cajas plegadizas con 3 empleados desde el garaje de su casa. Hoy somos una imprenta industrial con 3 plantas, 120 colaboradores y la primera operación de litolaminado corrugado del país."
+  },
+  "timeline": {
+    "eyebrow": "1979 — 2025",
+    "title": "45+ años, impresos año por año",
+    "milestones": [
+      {
+        "year": "1979",
+        "title": "Fundación",
+        "text": "Eduardo Saladín Zacarías funda la empresa en el sector de cajas plegadizas, con 3 empleados, desde el garaje de su casa."
+      },
+      {
+        "year": "Años 90",
+        "title": "Las grandes marcas llegan",
+        "text": "Nestlé, Colgate, Ray-o-Vac (Spectrum Brands), Unilever y Kimberly-Clark se suman a la cartera de clientes. La exigencia multinacional moldea nuestros estándares."
+      },
+      {
+        "year": "1992",
+        "title": "Alianza con Colgate",
+        "text": "Firmamos una alianza estratégica con Colgate, un hito que consolida nuestra posición en empaques plegadizos."
+      },
+      {
+        "year": "1998",
+        "title": "Adquisición y nuevo rumbo",
+        "text": "Adquirimos por completo la división de plegadizos. Entre 1998 y 2009 nos enfocamos también en impresión comercial y editorial."
+      },
+      {
+        "year": "2010",
+        "title": "Reinversión en plegadizos",
+        "text": "Volvemos a apostar fuerte por el empaque plegadizo, modernizando capacidades y procesos."
+      },
+      {
+        "year": "2022–2025",
+        "title": "SPACK y el litolaminado",
+        "text": "Expandimos al Parque Industrial de Zona Franca Las Américas para producir empaque litolaminado de alta calidad. Nace SPACK, nuestra marca de packaging de exportación."
+      }
+    ]
+  },
+  "mission": {
+    "eyebrow": "Nuestra misión",
+    "title": "Turning vision into value",
+    "text": "Dar vida a las ideas de comunicación de nuestros clientes: convertir su visión en empaques que protegen, destacan y venden. Creemos que la única manera de producir lo mejor es usar lo mejor — en materiales, en tecnología y en gente."
+  },
+  "locations": {
+    "eyebrow": "Dónde estamos",
+    "title": "Dos sedes, una misma calidad",
+    "hq": {
+      "title": "Saladín Industria Gráfica",
+      "desc": "Sede principal: plegadizos, etiquetas e impresión comercial.",
+      "mapTitle": "Mapa: sede Saladín en Zona Industrial de Herrera"
+    },
+    "spack": {
+      "title": "SPACK · Zona Franca Las Américas",
+      "desc": "Planta de empaque litolaminado de alta calidad, Nave A7.",
+      "mapTitle": "Mapa: planta SPACK en Zona Franca Las Américas"
+    }
+  }
+}

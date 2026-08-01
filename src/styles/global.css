@@ -1,0 +1,270 @@
+@import 'tailwindcss';
+
+/* ============================================================
+   DESIGN TOKENS — Saladín Industria Gráfica / SPACK
+   Paleta PROVISIONAL inspirada en el oficio (cartón, tinta, prensa).
+   [REEMPLAZAR] cada hex cuando el cliente entregue su manual de marca:
+   cambiarlos AQUÍ actualiza todo el sitio.
+   ============================================================ */
+@theme {
+  /* Azul tinta profundo — fondos institucionales */
+  --color-ink-950: #0a1420; /* [REEMPLAZAR] primario oscuro */
+  --color-ink-900: #0f1d30;
+  --color-ink-800: #152840; /* superficie elevada sobre ink */
+  --color-ink-600: #2c4666;
+  --color-ink-400: #6b83a1;
+
+  /* Papel estucado — superficies claras */
+  --color-paper: #f6f4ee; /* [REEMPLAZAR] fondo claro */
+  --color-paper-white: #fdfcf9;
+
+  /* Kraft / cartón — neutro cálido */
+  --color-kraft-100: #efe6d4;
+  --color-kraft-200: #e4d6bc;
+  --color-kraft-400: #c9a876;
+  --color-kraft-700: #7c5f38; /* texto kraft accesible sobre paper */
+
+  /* Tinta de prensa — ÚNICO acento saturado (CTAs, marcas de registro) */
+  --color-press-600: #c41e2a; /* [REEMPLAZAR] acento primario */
+  --color-press-700: #a3121d;
+
+  /* SPACK — acento cian proceso de la marca hija */
+  --color-spack-500: #0091c9; /* [REEMPLAZAR] acento SPACK */
+  --color-spack-700: #006e99; /* cian accesible sobre paper */
+  --color-spack-300: #5cc3e8; /* cian sobre fondos ink */
+
+  /* Tipografía */
+  --font-display: 'Archivo Variable', 'Arial Black', sans-serif;
+  --font-sans: 'Public Sans Variable', system-ui, sans-serif;
+  --font-mono: 'IBM Plex Mono', ui-monospace, monospace;
+
+  /* Escala display: pensada para titulares expandidos.
+     Máximos moderados: palabras largas (LITOLAMINADO, MICROCORRUGADO)
+     viven en columnas de mitad de ancho. */
+  --text-display-xl: clamp(2.25rem, 1.1rem + 4.2vw, 4.25rem);
+  --text-display-lg: clamp(1.75rem, 1rem + 2.8vw, 3rem);
+  --text-display-md: clamp(1.4rem, 1rem + 1.6vw, 2.2rem);
+}
+
+/* ============================================================
+   BASE
+   ============================================================ */
+html {
+  scroll-behavior: smooth;
+  background-color: var(--color-paper);
+  color: var(--color-ink-950);
+  font-family: var(--font-sans);
+  -webkit-text-size-adjust: 100%;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+body {
+  font-size: 1.0625rem;
+  line-height: 1.65;
+}
+
+::selection {
+  background-color: var(--color-press-600);
+  color: var(--color-paper-white);
+}
+
+/* Foco visible — accesibilidad AA */
+:focus-visible {
+  outline: 3px solid var(--color-press-600);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+.on-dark :focus-visible {
+  outline-color: var(--color-spack-300);
+}
+
+/* ============================================================
+   TIPOGRAFÍA DE ROL
+   ============================================================ */
+.display {
+  font-family: var(--font-display);
+  font-variation-settings: 'wdth' 125;
+  font-weight: 800;
+  line-height: 1.05;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+  text-wrap: balance;
+  /* Última defensa: nunca desbordar la columna con palabras largas */
+  overflow-wrap: break-word;
+  hyphens: auto;
+}
+
+.display-xl { font-size: var(--text-display-xl); }
+.display-lg { font-size: var(--text-display-lg); }
+.display-md { font-size: var(--text-display-md); }
+
+/* Cejilla técnica estilo ticket de imprenta */
+.eyebrow {
+  font-family: var(--font-mono);
+  font-size: 0.8125rem;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+/* ============================================================
+   GUIÑOS AL OFICIO
+   ============================================================ */
+
+/* Barra de calibración CMYK como divisor */
+.calibration-bar {
+  display: flex;
+  height: 6px;
+  width: 100%;
+}
+.calibration-bar > span { flex: 1; }
+.calibration-bar > span:nth-child(1) { background: #00a5db; } /* C */
+.calibration-bar > span:nth-child(2) { background: #d5007f; } /* M */
+.calibration-bar > span:nth-child(3) { background: #f5d000; } /* Y */
+.calibration-bar > span:nth-child(4) { background: #171717; } /* K */
+.calibration-bar > span:nth-child(5) { background: var(--color-kraft-400); }
+.calibration-bar > span:nth-child(6) { background: var(--color-press-600); }
+.calibration-bar > span:nth-child(7) { background: var(--color-ink-950); }
+.calibration-bar > span:nth-child(8) { background: var(--color-paper); }
+
+/* Textura sutil de flauta (microcorrugado) para bloques SPACK */
+.flute-texture {
+  background-image: repeating-linear-gradient(
+    90deg,
+    rgb(0 0 0 / 0.045) 0px,
+    rgb(0 0 0 / 0.045) 2px,
+    transparent 2px,
+    transparent 9px
+  );
+}
+
+/* ============================================================
+   TIMELINE FIRMA — "la línea que se imprime"
+   Progreso controlado por --print-progress (0 a 100).
+   Con scroll-driven animations nativas cuando existen;
+   fallback JS actualiza la variable; reduced-motion = ya impreso.
+   ============================================================ */
+.timeline-track {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 1.1rem;
+  width: 3px;
+  background: color-mix(in srgb, var(--color-ink-950) 12%, transparent);
+}
+
+.timeline-inkline {
+  position: absolute;
+  inset: 0;
+  transform-origin: top;
+  background: var(--color-press-600);
+  transform: scaleY(calc(var(--print-progress, 0) / 100));
+}
+
+.timeline-milestone {
+  opacity: 0;
+  transform: translateY(14px);
+  transition: opacity 0.55s ease, transform 0.55s ease;
+}
+
+.timeline-milestone.is-printed {
+  opacity: 1;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .timeline-inkline { transform: none !important; }
+  .timeline-milestone {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+}
+
+/* ============================================================
+   UTILIDADES DE COMPONENTE
+   ============================================================ */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: 1rem;
+  line-height: 1.2;
+  padding: 0.9rem 1.75rem;
+  border: 2px solid transparent;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.18s ease, color 0.18s ease, border-color 0.18s ease;
+}
+
+.btn-press {
+  background: var(--color-press-600);
+  color: var(--color-paper-white);
+}
+.btn-press:hover { background: var(--color-press-700); }
+
+.btn-outline-dark {
+  border-color: var(--color-ink-950);
+  color: var(--color-ink-950);
+  background: transparent;
+}
+.btn-outline-dark:hover {
+  background: var(--color-ink-950);
+  color: var(--color-paper);
+}
+
+.btn-outline-light {
+  border-color: var(--color-paper);
+  color: var(--color-paper);
+  background: transparent;
+}
+.btn-outline-light:hover {
+  background: var(--color-paper);
+  color: var(--color-ink-950);
+}
+
+/* Skip link accesible */
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  z-index: 100;
+  background: var(--color-ink-950);
+  color: var(--color-paper);
+  padding: 0.75rem 1.25rem;
+  font-weight: 700;
+}
+.skip-link:focus {
+  left: 0.5rem;
+  top: 0.5rem;
+}
+
+/* Inputs del formulario RFQ */
+.field-label {
+  display: block;
+  font-weight: 600;
+  font-size: 0.9375rem;
+  margin-bottom: 0.35rem;
+}
+
+.field-input {
+  width: 100%;
+  background: var(--color-paper-white);
+  border: 1.5px solid var(--color-ink-400);
+  padding: 0.7rem 0.9rem;
+  font-size: 1rem;
+  color: var(--color-ink-950);
+  border-radius: 2px;
+}
+.field-input:focus {
+  border-color: var(--color-ink-950);
+}

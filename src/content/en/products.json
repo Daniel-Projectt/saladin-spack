@@ -1,0 +1,120 @@
+{
+  "meta": {
+    "title": "Products | Folding cartons, litho-lamination & labels — Saladín Industria Gráfica",
+    "description": "Printed folding cartons, litho-laminated micro-corrugated board in E, B and C flutes, and adhesive labels. Made in the Dominican Republic with G7 color management and ISO 9001:2015."
+  },
+  "hero": {
+    "eyebrow": "Products",
+    "title": "Three ways to pack value",
+    "subtitle": "Everything we make shares the same foundation: in-house structural design, G7 color management and an ISO 9001:2015 quality system."
+  },
+  "quoteCta": "Request a quote",
+  "detailCta": "View details",
+  "industriesLabel": "Applications by industry",
+  "specsLabel": "Specifications",
+  "galleryLabel": "Gallery",
+  "capabilitiesLabel": "Backed by",
+  "sharedCapabilities": [
+    "In-house structural design and development",
+    "In-house G7 color management",
+    "Testing laboratory",
+    "ISO 9001:2015 quality system"
+  ],
+  "items": {
+    "plegadizas": {
+      "name": "Printed folding cartons",
+      "shortName": "Folding cartons",
+      "meta": {
+        "title": "Printed folding cartons in the Dominican Republic | Saladín",
+        "description": "Offset-printed paperboard folding cartons for food, pharma, consumer goods and beverages. 45+ years of specialization, ISO 9001:2015 and G7 color. Get your folding-carton quote."
+      },
+      "intro": "The product we were born with in 1979. Offset-printed, die-cut and glued paperboard cartons that protect your product and make it stand out on the shelf.",
+      "industries": [
+        { "name": "Food", "desc": "Cartons for dry, frozen and pantry products." },
+        { "name": "Pharma", "desc": "Secondary packaging with the traceability the industry demands." },
+        { "name": "Consumer goods", "desc": "Personal and home care, from shelf to home." },
+        { "name": "Beverages", "desc": "Cartons and multipacks for beverages and spirits." },
+        { "name": "Export", "desc": "Packaging ready to travel and comply in demanding markets." }
+      ],
+      "specs": [
+        { "label": "Process", "value": "Offset printing + die-cutting + gluing" },
+        { "label": "Substrates", "value": "[REPLACE: paperboard grades and calipers]" },
+        { "label": "Finishes", "value": "[REPLACE: available coatings, laminates and finishes]" },
+        { "label": "Color", "value": "In-house G7 color management" },
+        { "label": "Development", "value": "In-house structural design and dielines" }
+      ],
+      "gallery": [
+        "PHOTO: finished food folding cartons",
+        "PHOTO: die-cutter in operation",
+        "PHOTO: close-up of an offset-printed carton"
+      ],
+      "cta": {
+        "title": "Quote your folding cartons",
+        "desc": "Send us your artwork or your idea; our structural development team proposes the right carton."
+      }
+    },
+    "litolaminado": {
+      "name": "Litho-laminated micro-corrugated board",
+      "shortName": "Litho-laminated",
+      "meta": {
+        "title": "Litho-laminated boxes (E, B and C flutes) | SPACK by Saladín",
+        "description": "Litho-laminated corrugated pioneers in the Dominican Republic. High-quality offset printing laminated to micro-corrugated board in E, B and C flutes, from the Las Américas Free Trade Zone. Ideal for export."
+      },
+      "intro": "High-graphics offset printing laminated onto micro-corrugated board: corrugated strength with a folding-carton finish. We pioneered this technology in the Dominican Republic and produce it at our SPACK plant in the Las Américas Free Trade Zone.",
+      "industries": [
+        { "name": "Food", "desc": "Display-ready and shipping boxes with shelf graphics." },
+        { "name": "Beverages", "desc": "Tough multipacks with a premium image." },
+        { "name": "Consumer goods", "desc": "Club-pack packaging and point-of-sale displays." },
+        { "name": "Export", "desc": "Long-transit protection without sacrificing the brand." },
+        { "name": "Pharma", "desc": "Robust secondary packaging for export volumes." }
+      ],
+      "specs": [
+        { "label": "E flute", "value": "Fine profile: maximum graphic quality and die-cut precision" },
+        { "label": "B flute", "value": "Balance between compression strength and finish" },
+        { "label": "C flute", "value": "Extra cushioning for demanding loads and transit" },
+        { "label": "Process", "value": "High-quality offset + lamination to micro-corrugated board" },
+        { "label": "Plant", "value": "SPACK · Las Américas Free Trade Zone, Building A7" }
+      ],
+      "gallery": [
+        "PHOTO: finished litho-laminated boxes, Las Américas plant",
+        "PHOTO: laminator / litho-lamination process",
+        "PHOTO: litho-laminated point-of-sale display"
+      ],
+      "cta": {
+        "title": "Quote your litho-laminated packaging",
+        "desc": "Tell us what travels inside and where it's headed: we recommend the right flute and structure."
+      }
+    },
+    "etiquetas": {
+      "name": "Adhesive labels",
+      "shortName": "Labels",
+      "meta": {
+        "title": "Adhesive labels in Santo Domingo | Saladín Industria Gráfica",
+        "description": "Pressure-sensitive labels printed with G7 color management for food, beverages, pharma and consumer goods in the Dominican Republic. Complete your packaging system with Saladín."
+      },
+      "intro": "The piece that closes the system: pressure-sensitive labels with the same G7 color control as your cartons and boxes, so your brand looks identical at every touchpoint.",
+      "industries": [
+        { "name": "Food", "desc": "Labels for rigid and flexible containers." },
+        { "name": "Beverages", "desc": "Labels that withstand cold, moisture and handling." },
+        { "name": "Pharma", "desc": "Legible, consistent labeling for the health sector." },
+        { "name": "Consumer goods", "desc": "Series and versions with batch-to-batch color consistency." },
+        { "name": "Export", "desc": "Labeling compliance for international markets." }
+      ],
+      "specs": [
+        { "label": "Process", "value": "[REPLACE: label printing technologies]" },
+        { "label": "Materials", "value": "[REPLACE: available substrates and adhesives]" },
+        { "label": "Finishes", "value": "[REPLACE: coatings, laminates, foils]" },
+        { "label": "Color", "value": "In-house G7 color management" }
+      ],
+      "gallery": [
+        "PHOTO: printed adhesive label rolls",
+        "PHOTO: label press in operation",
+        "PHOTO: labeled client products (with authorization)"
+      ],
+      "cta": {
+        "title": "Quote your adhesive labels",
+        "desc": "Tell us the container, the environment (cold, moisture, export) and quantities; we propose material and finish."
+      }
+    }
+  }
+}

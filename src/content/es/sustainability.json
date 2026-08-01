@@ -1,0 +1,30 @@
+{
+  "meta": {
+    "title": "Sostenibilidad | Empaque de cartón y FSC — Saladín Industria Gráfica",
+    "description": "El cartón es la alternativa renovable y reciclable al plástico. Certificación FSC en proceso (esperada 2026) para acompañar a marcas exportadoras con empaques responsables."
+  },
+  "hero": {
+    "eyebrow": "Sostenibilidad",
+    "title": "El cartón es el empaque del futuro",
+    "subtitle": "Renovable, reciclable y biodegradable: el empaque de cartón es la alternativa real al plástico de un solo uso — y el que los mercados de exportación ya exigen."
+  },
+  "sections": [
+    {
+      "title": "Certificación FSC en proceso",
+      "text": "Estamos en proceso de certificación FSC, esperada para 2026, para ofrecer cadena de custodia verificada del papel y cartón que usamos."
+    },
+    {
+      "title": "Cartón vs. plástico",
+      "text": "Migrar empaques de plástico a cartón plegadizo o litolaminado reduce el impacto al final de la vida útil del empaque y comunica el compromiso de tu marca en el anaquel."
+    },
+    {
+      "title": "Pensado para exportadores",
+      "text": "Los mercados de Norteamérica y Europa piden evidencia de sostenibilidad. Te ayudamos a responder con materiales certificables y fichas técnicas de tu empaque."
+    }
+  ],
+  "cta": {
+    "title": "¿Migrando tu empaque a cartón?",
+    "desc": "Te acompañamos en la transición: estructura, materiales y costos.",
+    "button": "Conversemos"
+  }
+}

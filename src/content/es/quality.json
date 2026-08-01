@@ -1,0 +1,47 @@
+{
+  "meta": {
+    "title": "Calidad y capacidades | ISO 9001, G7, laboratorio — Saladín Industria Gráfica",
+    "description": "Sistema de gestión ISO 9001:2015 desde 2014, gestión de color G7 in-house, diseño estructural propio, laboratorio de pruebas y Plan de Continuidad de Negocio. Así garantizamos cada tirada."
+  },
+  "hero": {
+    "eyebrow": "Calidad y capacidades",
+    "title": "La única manera de producir lo mejor es usar lo mejor",
+    "subtitle": "Calidad aquí no es un eslogan: es un sistema certificado, medido e instalado en cada etapa — del dieline a la entrega."
+  },
+  "sections": [
+    {
+      "id": "iso",
+      "title": "ISO 9001:2015 desde 2014",
+      "text": "Nuestro sistema de gestión de calidad está certificado desde 2014. Procesos documentados, auditados y en mejora continua en las tres plantas."
+    },
+    {
+      "id": "g7",
+      "title": "Gestión de color G7 in-house",
+      "text": "Calibramos y controlamos el color con metodología G7 dentro de casa. Tu pantone se ve igual en la primera tirada y en la número cincuenta."
+    },
+    {
+      "id": "estructural",
+      "title": "Diseño estructural y desarrollo in-house",
+      "text": "Ingeniería de empaque propia: dielines, prototipos y desarrollo de estructuras a la medida del producto, la línea de llenado y la logística del cliente."
+    },
+    {
+      "id": "lab",
+      "title": "Laboratorio de pruebas",
+      "text": "Verificamos materiales y empaques terminados en nuestro laboratorio antes de que lleguen a tu línea."
+    },
+    {
+      "id": "bcp",
+      "title": "Plan de Continuidad de Negocio (BCP)",
+      "text": "Tu cadena de suministro no se detiene: contamos con un BCP formal para seguir sirviendo ante contingencias."
+    },
+    {
+      "id": "plantas",
+      "title": "3 plantas + almacén · 97,000 ft²",
+      "text": "Capacidad instalada real: tres plantas de producción y almacén, con 120 colaboradores, entre Herrera y Zona Franca Las Américas."
+    }
+  ],
+  "cta": {
+    "title": "Ponemos este sistema a trabajar para tu marca",
+    "button": "Solicitar cotización"
+  }
+}

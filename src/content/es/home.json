@@ -1,0 +1,70 @@
+{
+  "meta": {
+    "title": "Saladín Industria Gráfica | Empaques plegadizos, litolaminado y etiquetas en República Dominicana",
+    "description": "Imprenta industrial dominicana con 45+ años: cajas plegadizas impresas, empaque litolaminado (flautas E, B y C) y etiquetas adhesivas. ISO 9001:2015, gestión de color G7. Solicita tu cotización."
+  },
+  "hero": {
+    "eyebrow": "Desde 1979 · Santo Domingo, República Dominicana",
+    "title": "Empaque que imprime valor",
+    "subtitle": "Somos pioneros del litolaminado corrugado en República Dominicana. Tres plantas, 120 colaboradores y 45+ años convirtiendo la visión de nuestros clientes en empaques que venden.",
+    "imageLabel": "FOTO: prensa offset en producción, planta Herrera"
+  },
+  "trust": {
+    "items": [
+      { "value": "45+", "label": "años de historia" },
+      { "value": "ISO 9001", "label": "certificados desde 2014" },
+      { "value": "G7", "label": "gestión de color in-house" },
+      { "value": "120", "label": "colaboradores" },
+      { "value": "97,000 ft²", "label": "en 3 plantas + almacén" }
+    ]
+  },
+  "products": {
+    "eyebrow": "Tres productos núcleo",
+    "title": "Lo que fabricamos",
+    "items": [
+      {
+        "id": "plegadizas",
+        "num": "01",
+        "title": "Cajas plegadizas impresas",
+        "desc": "Estuches de cartulina impresos en offset para alimentos, farma y consumo masivo. Nuestro origen en 1979 y nuestra especialidad de siempre.",
+        "imageLabel": "FOTO: cajas plegadizas terminadas, varias industrias"
+      },
+      {
+        "id": "litolaminado",
+        "num": "02",
+        "title": "Cartón microcorrugado litolaminado",
+        "desc": "Impresión offset de alta calidad laminada sobre microcorrugado en flautas E, B y C. Producido en nuestra planta SPACK de Zona Franca Las Américas.",
+        "imageLabel": "FOTO: cajas litolaminadas terminadas, planta Las Américas"
+      },
+      {
+        "id": "etiquetas",
+        "num": "03",
+        "title": "Etiquetas adhesivas",
+        "desc": "Etiquetas autoadhesivas que completan el sistema de empaque de tu producto, con el mismo control de color G7 de toda la casa.",
+        "imageLabel": "FOTO: rollos de etiquetas adhesivas impresas"
+      }
+    ]
+  },
+  "spack": {
+    "eyebrow": "Nuestra marca de empaques",
+    "title": "SPACK: litolaminado de exportación",
+    "desc": "En 2022 expandimos operaciones al Parque Industrial de Zona Franca Las Américas para producir empaque litolaminado de alta calidad bajo nuestra marca SPACK — pensado para marcas que exportan desde el Caribe.",
+    "bullets": [
+      "Flautas E, B y C según la protección y el acabado que exige tu producto",
+      "Régimen de zona franca, ideal para clientes exportadores",
+      "Diseño estructural y desarrollo in-house"
+    ],
+    "cta": "Conocer el litolaminado"
+  },
+  "clients": {
+    "eyebrow": "Confianza construida en 45+ años",
+    "title": "Marcas que han confiado en nosotros",
+    "desc": "Desde los años 90 hemos producido para líderes como Nestlé, Colgate, Ray-o-Vac (Spectrum Brands), Unilever y Kimberly-Clark. Esa exigencia formó nuestra cultura de calidad.",
+    "note": "¿Tu marca es la próxima?"
+  },
+  "finalCta": {
+    "title": "Si lo puedes imaginar, lo podemos hacer realidad",
+    "desc": "Cuéntanos qué necesitas empacar. Te respondemos con una propuesta técnica y comercial.",
+    "button": "Solicitar cotización"
+  }
+}

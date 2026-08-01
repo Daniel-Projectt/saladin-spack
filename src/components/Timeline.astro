@@ -1,0 +1,88 @@
+---
+/**
+ * ELEMENTO FIRMA — "La línea que se imprime".
+ * Un rodillo con marca de registro desciende con el scroll y va "imprimiendo"
+ * la línea (gris sin tinta → rojo tinta de prensa). Cada hito se revela como
+ * recién salido de máquina. Con prefers-reduced-motion todo aparece ya impreso.
+ */
+import CalibrationBar from '~/components/CalibrationBar.astro';
+
+interface Props {
+  eyebrow: string;
+  title: string;
+  milestones: { year: string; title: string; text: string }[];
+}
+
+const { eyebrow, title, milestones } = Astro.props;
+---
+
+<section class="mx-auto max-w-6xl px-4 py-16 md:px-6 md:py-24">
+  <p class="eyebrow text-press-600">{eyebrow}</p>
+  <h2 class="display display-lg mt-2 max-w-3xl">{title}</h2>
+
+  <div id="print-timeline" class="relative mt-12 pl-12 md:pl-16" style="--print-progress: 0">
+    <div class="timeline-track" aria-hidden="true">
+      <div class="timeline-inkline"></div>
+      <div
+        id="print-roller"
+        class="absolute left-1/2 h-9 w-9 -translate-x-1/2 -translate-y-1/2 rounded-full border-[3px] border-press-600 bg-paper text-center font-mono text-[1.05rem] leading-[1.9rem] text-press-600"
+        style="top: calc(var(--print-progress, 0) * 1%)"
+      >
+        ⌖
+      </div>
+    </div>
+
+    <ol class="m-0 list-none space-y-14 p-0 md:space-y-20">
+      {milestones.map((m) => (
+        <li class="timeline-milestone">
+          <p class="display text-[clamp(2.2rem,1.4rem+3vw,4rem)] leading-none text-ink-950/90">{m.year}</p>
+          <div class="mt-3 max-w-xl">
+            <div class="mb-3 w-24"><CalibrationBar /></div>
+            <h3 class="text-xl font-bold">{m.title}</h3>
+            <p class="mt-1.5 text-ink-600">{m.text}</p>
+          </div>
+        </li>
+      ))}
+    </ol>
+  </div>
+</section>
+
+<script>
+  const root = document.getElementById('print-timeline');
+  const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  if (root) {
+    const milestones = Array.from(root.querySelectorAll<HTMLElement>('.timeline-milestone'));
+
+    if (reduced) {
+      root.style.setProperty('--print-progress', '100');
+      milestones.forEach((m) => m.classList.add('is-printed'));
+    } else {
+      let ticking = false;
+
+      const update = () => {
+        ticking = false;
+        const rect = root.getBoundingClientRect();
+        const viewportAnchor = window.innerHeight * 0.65;
+        const progress = Math.min(100, Math.max(0, ((viewportAnchor - rect.top) / rect.height) * 100));
+        root.style.setProperty('--print-progress', progress.toFixed(2));
+
+        const printedY = rect.top + (rect.height * progress) / 100;
+        for (const m of milestones) {
+          if (m.getBoundingClientRect().top <= printedY) m.classList.add('is-printed');
+        }
+      };
+
+      const onScroll = () => {
+        if (!ticking) {
+          ticking = true;
+          requestAnimationFrame(update);
+        }
+      };
+
+      window.addEventListener('scroll', onScroll, { passive: true });
+      window.addEventListener('resize', onScroll, { passive: true });
+      update();
+    }
+  }
+</script>

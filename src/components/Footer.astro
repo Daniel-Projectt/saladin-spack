@@ -1,0 +1,75 @@
+---
+import type { Lang, PageKey } from '~/i18n/routes';
+import { path } from '~/i18n/routes';
+import { company } from '~/data/company';
+import commonEs from '~/content/es/common.json';
+import commonEn from '~/content/en/common.json';
+import CalibrationBar from '~/components/CalibrationBar.astro';
+
+interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+const t = lang === 'es' ? commonEs : commonEn;
+
+const navItems: { key: PageKey; label: string }[] = [
+  { key: 'home', label: t.nav.home },
+  { key: 'about', label: t.nav.about },
+  { key: 'products', label: t.nav.products },
+  { key: 'quality', label: t.nav.quality },
+  { key: 'sustainability', label: t.nav.sustainability },
+  { key: 'contact', label: t.nav.contact },
+];
+
+const year = new Date().getFullYear();
+---
+
+<footer class="on-dark bg-ink-950 text-paper">
+  <CalibrationBar />
+  <div class="mx-auto grid max-w-6xl gap-10 px-4 py-14 md:grid-cols-2 md:px-6 lg:grid-cols-4">
+    <div>
+      <p class="display text-xl"><span aria-hidden="true" class="mr-1 text-press-600">⌖</span>SALADÍN</p>
+      <p class="mt-3 max-w-xs text-[0.95rem] text-ink-400">{t.footer.tagline}</p>
+      <p class="eyebrow mt-5 text-spack-300">SPACK</p>
+    </div>
+
+    <div>
+      <h2 class="eyebrow mb-3 text-ink-400">{t.footer.hqLabel}</h2>
+      <p class="text-[0.95rem] leading-relaxed">
+        {company.hq.street}<br />
+        {company.hq.city}, República Dominicana
+      </p>
+      <h2 class="eyebrow mb-3 mt-6 text-ink-400">{t.footer.spackLabel}</h2>
+      <p class="text-[0.95rem] leading-relaxed">
+        {company.spack.street}<br />
+        {company.spack.city}, República Dominicana
+      </p>
+    </div>
+
+    <div>
+      <h2 class="eyebrow mb-3 text-ink-400">{t.footer.contactLabel}</h2>
+      <ul class="m-0 list-none space-y-2 p-0 text-[0.95rem]">
+        <li><a href={`tel:${company.phoneHref}`} class="text-paper no-underline hover:underline">{company.phone}</a></li>
+        <li><a href={`mailto:${company.email}`} class="break-all text-paper no-underline hover:underline">{company.email}</a></li>
+        <li><a href={company.whatsappHref} class="text-paper no-underline hover:underline" rel="noopener">WhatsApp: {company.whatsapp}</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h2 class="eyebrow mb-3 text-ink-400">{t.footer.navLabel}</h2>
+      <ul class="m-0 list-none space-y-2 p-0 text-[0.95rem]">
+        {navItems.map((item) => (
+          <li><a href={path(item.key, lang)} class="text-paper no-underline hover:underline">{item.label}</a></li>
+        ))}
+      </ul>
+    </div>
+  </div>
+
+  <div class="border-t border-ink-800">
+    <div class="mx-auto flex max-w-6xl flex-col gap-2 px-4 py-5 text-[0.85rem] text-ink-400 md:flex-row md:items-center md:justify-between md:px-6">
+      <p>{t.footer.certLine}</p>
+      <p>© {year} {t.footer.legal}</p>
+    </div>
+  </div>
+</footer>

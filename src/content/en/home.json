@@ -1,0 +1,70 @@
+{
+  "meta": {
+    "title": "Saladín Industria Gráfica | Folding cartons, litho-laminated packaging & labels — Dominican Republic",
+    "description": "Dominican industrial printer with 45+ years: printed folding cartons, litho-laminated packaging (E, B and C flutes) and adhesive labels. ISO 9001:2015, G7 color management. Request your quote."
+  },
+  "hero": {
+    "eyebrow": "Since 1979 · Santo Domingo, Dominican Republic",
+    "title": "Packaging that prints value",
+    "subtitle": "We pioneered litho-laminated corrugated packaging in the Dominican Republic. Three plants, 120 employees and 45+ years turning our clients' vision into packaging that sells.",
+    "imageLabel": "PHOTO: offset press running, Herrera plant"
+  },
+  "trust": {
+    "items": [
+      { "value": "45+", "label": "years in business" },
+      { "value": "ISO 9001", "label": "certified since 2014" },
+      { "value": "G7", "label": "in-house color management" },
+      { "value": "120", "label": "employees" },
+      { "value": "97,000 ft²", "label": "across 3 plants + warehouse" }
+    ]
+  },
+  "products": {
+    "eyebrow": "Three core products",
+    "title": "What we make",
+    "items": [
+      {
+        "id": "plegadizas",
+        "num": "01",
+        "title": "Printed folding cartons",
+        "desc": "Offset-printed paperboard cartons for food, pharma and consumer goods. Our origin in 1979 and our lifelong specialty.",
+        "imageLabel": "PHOTO: finished folding cartons, several industries"
+      },
+      {
+        "id": "litolaminado",
+        "num": "02",
+        "title": "Litho-laminated micro-corrugated board",
+        "desc": "High-quality offset printing laminated onto micro-corrugated board in E, B and C flutes. Produced at our SPACK plant in the Las Américas Free Trade Zone.",
+        "imageLabel": "PHOTO: finished litho-laminated boxes, Las Américas plant"
+      },
+      {
+        "id": "etiquetas",
+        "num": "03",
+        "title": "Adhesive labels",
+        "desc": "Pressure-sensitive labels that complete your product's packaging system, with the same G7 color control as everything we print.",
+        "imageLabel": "PHOTO: printed adhesive label rolls"
+      }
+    ]
+  },
+  "spack": {
+    "eyebrow": "Our packaging brand",
+    "title": "SPACK: export-grade litho-lamination",
+    "desc": "In 2022 we expanded into the Las Américas Free Trade Zone industrial park to produce high-quality litho-laminated packaging under our SPACK brand — built for brands exporting from the Caribbean.",
+    "bullets": [
+      "E, B and C flutes to match the protection and finish your product demands",
+      "Free-trade-zone regime, ideal for exporting clients",
+      "In-house structural design and development"
+    ],
+    "cta": "Explore litho-lamination"
+  },
+  "clients": {
+    "eyebrow": "Trust built over 45+ years",
+    "title": "Brands that have trusted us",
+    "desc": "Since the 1990s we have produced for leaders such as Nestlé, Colgate, Ray-o-Vac (Spectrum Brands), Unilever and Kimberly-Clark. That level of demand shaped our quality culture.",
+    "note": "Is your brand next?"
+  },
+  "finalCta": {
+    "title": "If you can imagine it, we can make it happen",
+    "desc": "Tell us what you need to pack. We reply with a technical and commercial proposal.",
+    "button": "Request a quote"
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "nav": {
+    "home": "Inicio",
+    "about": "Nosotros",
+    "products": "Productos",
+    "quality": "Calidad",
+    "sustainability": "Sostenibilidad",
+    "contact": "Contacto"
+  },
+  "cta": {
+    "quote": "Solicitar cotización",
+    "seeProducts": "Ver productos"
+  },
+  "langSwitch": "English",
+  "skipLink": "Saltar al contenido principal",
+  "breadcrumbHome": "Inicio",
+  "whatsapp": {
+    "label": "Escríbenos por WhatsApp",
+    "message": "Hola, quiero cotizar un proyecto de empaque con Saladín."
+  },
+  "footer": {
+    "tagline": "Convertimos visión en valor desde 1979.",
+    "hqLabel": "Sede principal",
+    "spackLabel": "Planta SPACK · Zona Franca",
+    "contactLabel": "Contacto",
+    "navLabel": "Mapa del sitio",
+    "certLine": "ISO 9001:2015 desde 2014 · Gestión de color G7 · Certificación FSC en proceso (2026)",
+    "legal": "Saladín Industria Gráfica. Todos los derechos reservados."
+  }
+}

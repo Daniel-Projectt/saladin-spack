@@ -1,0 +1,51 @@
+---
+import BaseLayout from '~/layouts/BaseLayout.astro';
+import Breadcrumbs from '~/components/Breadcrumbs.astro';
+import CalibrationBar from '~/components/CalibrationBar.astro';
+import type { Lang } from '~/i18n/routes';
+import { path } from '~/i18n/routes';
+import qualityEs from '~/content/es/quality.json';
+import qualityEn from '~/content/en/quality.json';
+import commonEs from '~/content/es/common.json';
+import commonEn from '~/content/en/common.json';
+
+interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+const t = lang === 'es' ? qualityEs : qualityEn;
+const c = lang === 'es' ? commonEs : commonEn;
+---
+
+<BaseLayout lang={lang} pageKey="quality" title={t.meta.title} description={t.meta.description}>
+  <div class="mx-auto max-w-6xl px-4 pt-8 md:px-6">
+    <Breadcrumbs items={[{ label: c.breadcrumbHome, href: path('home', lang) }, { label: c.nav.quality }]} />
+  </div>
+
+  <section class="mx-auto max-w-6xl px-4 py-12 md:px-6 md:py-16">
+    <p class="eyebrow text-press-600">{t.hero.eyebrow}</p>
+    <h1 class="display display-xl mt-3 max-w-4xl">{t.hero.title}</h1>
+    <p class="mt-6 max-w-3xl text-lg text-ink-600">{t.hero.subtitle}</p>
+  </section>
+
+  <section class="mx-auto max-w-6xl px-4 pb-20 md:px-6">
+    <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+      {t.sections.map((s) => (
+        <article class="border border-ink-950/15 bg-paper-white p-6">
+          <p aria-hidden="true" class="font-mono text-press-600">⌖</p>
+          <h2 class="display display-md mt-3">{s.title}</h2>
+          <p class="mt-3 text-ink-600">{s.text}</p>
+        </article>
+      ))}
+    </div>
+  </section>
+
+  <section class="on-dark bg-ink-950 text-paper">
+    <CalibrationBar />
+    <div class="mx-auto max-w-4xl px-4 py-14 text-center md:px-6 md:py-20">
+      <h2 class="display display-lg">{t.cta.title}</h2>
+      <a href={path('contact', lang)} class="btn btn-press mt-8">{t.cta.button}</a>
+    </div>
+  </section>
+</BaseLayout>

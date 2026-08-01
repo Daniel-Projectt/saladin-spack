@@ -1,0 +1,66 @@
+{
+  "meta": {
+    "title": "About us | 45+ years of history — Saladín Industria Gráfica",
+    "description": "Founded in 1979 by Eduardo Saladín Zacarías, Saladín Industria Gráfica grew from a garage with 3 employees into 3 plants, 120 employees and the Dominican Republic's litho-lamination pioneer."
+  },
+  "hero": {
+    "eyebrow": "Our history",
+    "title": "From the garage to the free trade zone",
+    "subtitle": "In 1979, Eduardo Saladín Zacarías began making folding cartons with 3 employees from his home garage. Today we are an industrial printer with 3 plants, 120 employees and the country's first litho-laminated corrugated operation."
+  },
+  "timeline": {
+    "eyebrow": "1979 — 2025",
+    "title": "45+ years, printed year by year",
+    "milestones": [
+      {
+        "year": "1979",
+        "title": "Founded",
+        "text": "Eduardo Saladín Zacarías founds the company in the folding-carton business, with 3 employees, from his home garage."
+      },
+      {
+        "year": "The '90s",
+        "title": "The big brands arrive",
+        "text": "Nestlé, Colgate, Ray-o-Vac (Spectrum Brands), Unilever and Kimberly-Clark join the client roster. Multinational standards shape our own."
+      },
+      {
+        "year": "1992",
+        "title": "Colgate alliance",
+        "text": "We sign a strategic alliance with Colgate, a milestone that consolidates our position in folding cartons."
+      },
+      {
+        "year": "1998",
+        "title": "Acquisition and a new course",
+        "text": "We fully acquire the folding-carton division. From 1998 to 2009 we also focus on commercial and editorial printing."
+      },
+      {
+        "year": "2010",
+        "title": "Reinvesting in cartons",
+        "text": "We double down on folding cartons, modernizing capabilities and processes."
+      },
+      {
+        "year": "2022–2025",
+        "title": "SPACK and litho-lamination",
+        "text": "We expand into the Las Américas Free Trade Zone industrial park to produce high-quality litho-laminated packaging. SPACK, our export packaging brand, is born."
+      }
+    ]
+  },
+  "mission": {
+    "eyebrow": "Our mission",
+    "title": "Turning vision into value",
+    "text": "Bringing our clients' communication ideas to life: turning their vision into packaging that protects, stands out and sells. We believe the only way to produce the best is to use the best — in materials, technology and people."
+  },
+  "locations": {
+    "eyebrow": "Where we are",
+    "title": "Two locations, one standard",
+    "hq": {
+      "title": "Saladín Industria Gráfica",
+      "desc": "Headquarters: folding cartons, labels and commercial printing.",
+      "mapTitle": "Map: Saladín headquarters, Herrera Industrial Zone"
+    },
+    "spack": {
+      "title": "SPACK · Las Américas Free Trade Zone",
+      "desc": "High-quality litho-laminated packaging plant, Building A7.",
+      "mapTitle": "Map: SPACK plant, Las Américas Free Trade Zone"
+    }
+  }
+}

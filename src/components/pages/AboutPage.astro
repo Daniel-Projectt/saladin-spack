@@ -1,0 +1,85 @@
+---
+import BaseLayout from '~/layouts/BaseLayout.astro';
+import CalibrationBar from '~/components/CalibrationBar.astro';
+import Timeline from '~/components/Timeline.astro';
+import Breadcrumbs from '~/components/Breadcrumbs.astro';
+import type { Lang } from '~/i18n/routes';
+import { path } from '~/i18n/routes';
+import { company } from '~/data/company';
+import aboutEs from '~/content/es/about.json';
+import aboutEn from '~/content/en/about.json';
+import commonEs from '~/content/es/common.json';
+import commonEn from '~/content/en/common.json';
+
+interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+const t = lang === 'es' ? aboutEs : aboutEn;
+const c = lang === 'es' ? commonEs : commonEn;
+---
+
+<BaseLayout lang={lang} pageKey="about" title={t.meta.title} description={t.meta.description}>
+  <div class="mx-auto max-w-6xl px-4 pt-8 md:px-6">
+    <Breadcrumbs items={[{ label: c.breadcrumbHome, href: path('home', lang) }, { label: c.nav.about }]} />
+  </div>
+
+  <!-- HERO -->
+  <section class="mx-auto max-w-6xl px-4 py-12 md:px-6 md:py-16">
+    <p class="eyebrow text-press-600">{t.hero.eyebrow}</p>
+    <h1 class="display display-xl mt-3 max-w-4xl">{t.hero.title}</h1>
+    <p class="mt-6 max-w-3xl text-lg text-ink-600">{t.hero.subtitle}</p>
+  </section>
+
+  <!-- TIMELINE FIRMA -->
+  <Timeline eyebrow={t.timeline.eyebrow} title={t.timeline.title} milestones={t.timeline.milestones} />
+
+  <!-- MISIÓN -->
+  <section class="on-dark bg-ink-950 text-paper">
+    <CalibrationBar />
+    <div class="mx-auto max-w-4xl px-4 py-16 text-center md:px-6 md:py-24">
+      <p class="eyebrow text-spack-300">{t.mission.eyebrow}</p>
+      <h2 class="display display-lg mt-3">{t.mission.title}</h2>
+      <p class="mx-auto mt-6 max-w-2xl text-lg text-ink-400">{t.mission.text}</p>
+    </div>
+    <CalibrationBar />
+  </section>
+
+  <!-- SEDES -->
+  <section class="mx-auto max-w-6xl px-4 py-16 md:px-6 md:py-24">
+    <p class="eyebrow text-press-600">{t.locations.eyebrow}</p>
+    <h2 class="display display-lg mt-2">{t.locations.title}</h2>
+    <div class="mt-10 grid gap-8 lg:grid-cols-2">
+      <div class="border border-ink-950/15 bg-paper-white">
+        <iframe
+          src={`https://www.google.com/maps?q=${company.hq.mapQuery}&output=embed`}
+          title={t.locations.hq.mapTitle}
+          loading="lazy"
+          class="h-64 w-full border-0"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+        <div class="p-6">
+          <h3 class="display display-md">{t.locations.hq.title}</h3>
+          <p class="mt-2 text-ink-600">{t.locations.hq.desc}</p>
+          <p class="mt-3 text-[0.95rem]">{company.hq.street}, {company.hq.city}</p>
+        </div>
+      </div>
+      <div class="flute-texture border border-kraft-400 bg-kraft-100">
+        <iframe
+          src={`https://www.google.com/maps?q=${company.spack.mapQuery}&output=embed`}
+          title={t.locations.spack.mapTitle}
+          loading="lazy"
+          class="h-64 w-full border-0"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+        <div class="p-6">
+          <p class="eyebrow text-spack-700">SPACK</p>
+          <h3 class="display display-md mt-1">{t.locations.spack.title}</h3>
+          <p class="mt-2 text-ink-950/70">{t.locations.spack.desc}</p>
+          <p class="mt-3 text-[0.95rem]">{company.spack.street}, {company.spack.city}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

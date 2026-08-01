@@ -1,0 +1,30 @@
+{
+  "meta": {
+    "title": "Sustainability | Paperboard packaging & FSC — Saladín Industria Gráfica",
+    "description": "Paperboard is the renewable, recyclable alternative to plastic. FSC certification in progress (expected 2026) to support exporting brands with responsible packaging."
+  },
+  "hero": {
+    "eyebrow": "Sustainability",
+    "title": "Paperboard is the future of packaging",
+    "subtitle": "Renewable, recyclable and biodegradable: paperboard packaging is the real alternative to single-use plastic — and the one export markets already demand."
+  },
+  "sections": [
+    {
+      "title": "FSC certification in progress",
+      "text": "We are in the FSC certification process, expected for 2026, to offer verified chain of custody for the paper and board we use."
+    },
+    {
+      "title": "Paperboard vs. plastic",
+      "text": "Migrating packaging from plastic to folding cartons or litho-laminated board reduces end-of-life impact and communicates your brand's commitment on the shelf."
+    },
+    {
+      "title": "Built for exporters",
+      "text": "North American and European markets ask for sustainability evidence. We help you answer with certifiable materials and technical datasheets for your packaging."
+    }
+  ],
+  "cta": {
+    "title": "Moving your packaging to paperboard?",
+    "desc": "We walk the transition with you: structure, materials and costs.",
+    "button": "Let's talk"
+  }
+}

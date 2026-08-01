@@ -1,0 +1,98 @@
+---
+import type { Lang, PageKey } from '~/i18n/routes';
+import { path } from '~/i18n/routes';
+import commonEs from '~/content/es/common.json';
+import commonEn from '~/content/en/common.json';
+
+interface Props {
+  lang: Lang;
+  pageKey: PageKey;
+}
+
+const { lang, pageKey } = Astro.props;
+const t = lang === 'es' ? commonEs : commonEn;
+const otherLang: Lang = lang === 'es' ? 'en' : 'es';
+
+const navItems: { key: PageKey; label: string }[] = [
+  { key: 'about', label: t.nav.about },
+  { key: 'products', label: t.nav.products },
+  { key: 'quality', label: t.nav.quality },
+  { key: 'sustainability', label: t.nav.sustainability },
+  { key: 'contact', label: t.nav.contact },
+];
+
+const currentPath = Astro.url.pathname;
+const isActive = (key: PageKey) => currentPath.startsWith(path(key, lang).replace(/\/$/, ''));
+---
+
+<header class="sticky top-0 z-50 border-b border-ink-950/10 bg-paper/95 backdrop-blur-sm">
+  <div class="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-3 md:px-6">
+    <a href={path('home', lang)} class="display text-lg tracking-tight text-ink-950 no-underline" aria-label={`Saladín Industria Gráfica — ${t.nav.home}`}>
+      <span aria-hidden="true" class="mr-1 text-press-600">⌖</span>SALADÍN
+    </a>
+
+    <nav class="hidden items-center gap-6 lg:flex" aria-label={t.footer.navLabel}>
+      {navItems.map((item) => (
+        <a
+          href={path(item.key, lang)}
+          aria-current={isActive(item.key) ? 'page' : undefined}
+          class:list={[
+            'text-[0.95rem] font-semibold no-underline transition-colors',
+            isActive(item.key) ? 'text-press-600' : 'text-ink-950 hover:text-press-600',
+          ]}
+        >
+          {item.label}
+        </a>
+      ))}
+      <a href={path(pageKey, otherLang)} class="eyebrow border border-ink-950/25 px-2.5 py-1.5 text-ink-600 no-underline hover:border-ink-950" data-astro-reload>
+        {lang === 'es' ? 'EN' : 'ES'}
+      </a>
+      <a href={path('contact', lang)} class="btn btn-press !py-2.5 !text-[0.95rem]">{t.cta.quote}</a>
+    </nav>
+
+    <div class="flex items-center gap-3 lg:hidden">
+      <a href={path(pageKey, otherLang)} class="eyebrow border border-ink-950/25 px-2 py-1 text-ink-600 no-underline">
+        {lang === 'es' ? 'EN' : 'ES'}
+      </a>
+      <button
+        id="menu-toggle"
+        type="button"
+        class="flex h-10 w-10 flex-col items-center justify-center gap-1.5 border border-ink-950/25"
+        aria-expanded="false"
+        aria-controls="mobile-menu"
+        aria-label="Menú"
+      >
+        <span class="block h-0.5 w-5 bg-ink-950"></span>
+        <span class="block h-0.5 w-5 bg-ink-950"></span>
+        <span class="block h-0.5 w-5 bg-ink-950"></span>
+      </button>
+    </div>
+  </div>
+
+  <nav id="mobile-menu" hidden class="border-t border-ink-950/10 bg-paper px-4 pb-5 pt-2 lg:hidden" aria-label={t.footer.navLabel}>
+    <ul class="m-0 list-none space-y-1 p-0">
+      {navItems.map((item) => (
+        <li>
+          <a
+            href={path(item.key, lang)}
+            aria-current={isActive(item.key) ? 'page' : undefined}
+            class="block py-2.5 text-lg font-semibold text-ink-950 no-underline"
+          >
+            {item.label}
+          </a>
+        </li>
+      ))}
+    </ul>
+    <a href={path('contact', lang)} class="btn btn-press mt-3 w-full">{t.cta.quote}</a>
+  </nav>
+</header>
+
+<script>
+  const toggle = document.getElementById('menu-toggle');
+  const menu = document.getElementById('mobile-menu');
+  toggle?.addEventListener('click', () => {
+    const open = toggle.getAttribute('aria-expanded') === 'true';
+    toggle.setAttribute('aria-expanded', String(!open));
+    if (menu) menu.hidden = open;
+  });
+</script>
