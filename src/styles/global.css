@@ -95,9 +95,8 @@ body {
   letter-spacing: -0.01em;
   text-transform: uppercase;
   text-wrap: balance;
-  /* Última defensa: nunca desbordar la columna con palabras largas */
+  /* Última defensa contra desbordes; NO hyphens: nada de cortar palabras con guion */
   overflow-wrap: break-word;
-  hyphens: auto;
 }
 
 .display-xl { font-size: var(--text-display-xl); }
@@ -168,6 +167,7 @@ body {
 }
 
 .timeline-milestone {
+  position: relative;
   opacity: 0;
   transform: translateY(14px);
   transition: opacity 0.55s ease, transform 0.55s ease;
@@ -176,6 +176,44 @@ body {
 .timeline-milestone.is-printed {
   opacity: 1;
   transform: none;
+}
+
+/* Punto sobre la línea que se "entinta" cuando el rodillo lo pasa */
+.timeline-milestone::before {
+  content: '';
+  position: absolute;
+  top: 2.2rem;
+  left: calc(1.1rem + 1.5px - 3rem - 7px);
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--color-paper);
+  border: 3px solid color-mix(in srgb, var(--color-ink-950) 25%, transparent);
+  transition: border-color 0.4s ease, background-color 0.4s ease;
+}
+
+@media (min-width: 768px) {
+  .timeline-milestone::before {
+    left: calc(1.1rem + 1.5px - 4rem - 7px);
+  }
+}
+
+.timeline-milestone.is-printed::before {
+  border-color: var(--color-press-600);
+  background: var(--color-press-600);
+}
+
+/* Año fantasma: solo contorno, como número de plancha de imprenta */
+.ghost-year {
+  font-family: var(--font-display);
+  font-variation-settings: 'wdth' 125;
+  font-weight: 800;
+  font-size: clamp(5rem, 11vw, 10rem);
+  line-height: 1;
+  white-space: nowrap;
+  color: transparent;
+  -webkit-text-stroke: 2px color-mix(in srgb, var(--color-ink-950) 16%, transparent);
+  user-select: none;
 }
 
 @media (prefers-reduced-motion: reduce) {

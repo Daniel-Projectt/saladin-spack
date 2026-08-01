@@ -14,36 +14,50 @@ interface Props {
 }
 
 const { eyebrow, title, milestones } = Astro.props;
+
+const total = String(milestones.length).padStart(2, '0');
+/** Año corto para el fantasma de fondo ("Años 90" → "90", "2022–2025" → "2022"). */
+const ghostOf = (year: string) => year.match(/\d{2,4}/)?.[0] ?? '';
 ---
 
-<section class="mx-auto max-w-6xl px-4 py-16 md:px-6 md:py-24">
-  <p class="eyebrow text-press-600">{eyebrow}</p>
-  <h2 class="display display-lg mt-2 max-w-3xl">{title}</h2>
+<section class="border-y border-ink-950/10 bg-kraft-100/60">
+  <div class="mx-auto max-w-6xl px-4 py-16 md:px-6 md:py-24">
+    <p class="eyebrow text-press-600">{eyebrow}</p>
+    <h2 class="display display-lg mt-2 max-w-3xl">{title}</h2>
 
-  <div id="print-timeline" class="relative mt-12 pl-12 md:pl-16" style="--print-progress: 0">
-    <div class="timeline-track" aria-hidden="true">
-      <div class="timeline-inkline"></div>
-      <div
-        id="print-roller"
-        class="absolute left-1/2 h-9 w-9 -translate-x-1/2 -translate-y-1/2 rounded-full border-[3px] border-press-600 bg-paper text-center font-mono text-[1.05rem] leading-[1.9rem] text-press-600"
-        style="top: calc(var(--print-progress, 0) * 1%)"
-      >
-        ⌖
+    <div id="print-timeline" class="relative mt-12 pl-12 md:pl-16" style="--print-progress: 0">
+      <div class="timeline-track" aria-hidden="true">
+        <div class="timeline-inkline"></div>
+        <div
+          id="print-roller"
+          class="absolute left-1/2 flex h-10 w-10 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border-[3px] border-press-600 bg-paper font-mono text-[1.35rem] text-press-600"
+          style="top: calc(var(--print-progress, 0) * 1%)"
+        >
+          ⌖
+        </div>
       </div>
-    </div>
 
-    <ol class="m-0 list-none space-y-14 p-0 md:space-y-20">
-      {milestones.map((m) => (
-        <li class="timeline-milestone">
-          <p class="display text-[clamp(2.2rem,1.4rem+3vw,4rem)] leading-none text-ink-950/90">{m.year}</p>
-          <div class="mt-3 max-w-xl">
-            <div class="mb-3 w-24"><CalibrationBar /></div>
-            <h3 class="text-xl font-bold">{m.title}</h3>
-            <p class="mt-1.5 text-ink-600">{m.text}</p>
-          </div>
-        </li>
-      ))}
-    </ol>
+      <ol class="m-0 list-none space-y-14 p-0 md:space-y-20">
+        {milestones.map((m, i) => (
+          <li class="timeline-milestone">
+            <div class="flex items-center justify-between gap-8">
+              <div>
+                <p class="eyebrow text-press-600">
+                  <span aria-hidden="true">⌖</span> {String(i + 1).padStart(2, '0')} / {total}
+                </p>
+                <p class="display mt-2 text-[clamp(2.2rem,1.4rem+3vw,4rem)] leading-none text-ink-950/90">{m.year}</p>
+                <div class="mt-3 max-w-xl">
+                  <div class="mb-3 w-24"><CalibrationBar /></div>
+                  <h3 class="text-xl font-bold">{m.title}</h3>
+                  <p class="mt-1.5 text-ink-600">{m.text}</p>
+                </div>
+              </div>
+              <span class="ghost-year hidden shrink-0 lg:block" aria-hidden="true">{ghostOf(m.year)}</span>
+            </div>
+          </li>
+        ))}
+      </ol>
+    </div>
   </div>
 </section>
 
