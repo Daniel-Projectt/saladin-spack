@@ -7,31 +7,32 @@
    cambiarlos AQUÍ actualiza todo el sitio.
    ============================================================ */
 @theme {
-  /* Azul tinta profundo — fondos institucionales */
-  --color-ink-950: #0a1420; /* [REEMPLAZAR] primario oscuro */
-  --color-ink-900: #0f1d30;
-  --color-ink-800: #152840; /* superficie elevada sobre ink */
-  --color-ink-600: #2c4666;
-  --color-ink-400: #6b83a1;
+  /* PALETA MORADA — muestreada de la presentación de marca 2026.
+     [REEMPLAZAR] con los hex exactos cuando llegue el manual oficial. */
+  --color-ink-950: #241849; /* morado profundo casi negro */
+  --color-ink-900: #2c1e59;
+  --color-ink-800: #3f2b76; /* morado de marca (fondos del deck) */
+  --color-ink-600: #5a4a91; /* texto secundario sobre paper */
+  --color-ink-400: #9c90c6; /* texto sobre fondos morados */
 
   /* Papel estucado — superficies claras */
-  --color-paper: #f6f4ee; /* [REEMPLAZAR] fondo claro */
+  --color-paper: #f6f4ee;
   --color-paper-white: #fdfcf9;
 
-  /* Kraft / cartón — neutro cálido */
+  /* Kraft / cartón — neutro cálido (verdad del producto) */
   --color-kraft-100: #efe6d4;
   --color-kraft-200: #e4d6bc;
   --color-kraft-400: #c9a876;
   --color-kraft-700: #7c5f38; /* texto kraft accesible sobre paper */
 
-  /* Tinta de prensa — ÚNICO acento saturado (CTAs, marcas de registro) */
-  --color-press-600: #c41e2a; /* [REEMPLAZAR] acento primario */
-  --color-press-700: #a3121d;
+  /* Acento saturado — violeta de prensa (CTAs, registro, línea del timeline) */
+  --color-press-600: #6a3fd6;
+  --color-press-700: #5232ad;
 
-  /* SPACK — acento cian proceso de la marca hija */
-  --color-spack-500: #0091c9; /* [REEMPLAZAR] acento SPACK */
-  --color-spack-700: #006e99; /* cian accesible sobre paper */
-  --color-spack-300: #5cc3e8; /* cian sobre fondos ink */
+  /* Aqua de marca — el acento claro del deck (destacados sobre morado, SPACK) */
+  --color-spack-500: #35c4b5;
+  --color-spack-700: #0f8a7c; /* aqua accesible sobre paper */
+  --color-spack-300: #a5f0e7; /* aqua sobre fondos morados */
 
   /* Tipografía */
   --font-display: 'Archivo Variable', 'Arial Black', sans-serif;
