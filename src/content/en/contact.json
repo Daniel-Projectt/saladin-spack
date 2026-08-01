@@ -27,11 +27,12 @@
     "targetDate": "Target delivery date",
     "message": "Message",
     "messagePlaceholder": "Product to pack, destination market, desired finishes…",
-    "attachment": "Attach artwork or dieline (optional)",
-    "attachmentHint": "PDF, AI or image. Max 10 MB.",
+    "attachmentNote": "Have artwork or a dieline? Attach it when replying to our quote email.",
     "submit": "Send quote request",
     "requiredNote": "* Required fields",
-    "successNote": "Thank you — your request was sent. We'll be in touch shortly."
+    "disabledNote": "Form being set up — in the meantime, email us at servicioalcliente@saladinig.com or call +1 809-530-0101.",
+    "success": "We received your request. We'll reply within 1 business day.",
+    "error": "We couldn't send your request. Please try again, or email servicioalcliente@saladinig.com or call +1 809-530-0101."
   },
   "direct": {
     "title": "Direct, no form",

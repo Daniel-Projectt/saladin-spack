@@ -27,11 +27,12 @@
     "targetDate": "Fecha objetivo de entrega",
     "message": "Mensaje",
     "messagePlaceholder": "Producto a empacar, mercado de destino, acabados deseados…",
-    "attachment": "Adjuntar arte o dieline (opcional)",
-    "attachmentHint": "PDF, AI o imagen. Máx. 10 MB.",
+    "attachmentNote": "¿Tienes arte o dieline? Adjúntalo al responder nuestro correo de cotización.",
     "submit": "Enviar solicitud de cotización",
     "requiredNote": "* Campos obligatorios",
-    "successNote": "Gracias — tu solicitud fue enviada. Te contactaremos en breve."
+    "disabledNote": "Formulario en configuración — mientras tanto escríbenos a servicioalcliente@saladinig.com o llámanos al +1 809-530-0101.",
+    "success": "Recibimos tu solicitud. Te respondemos en 1 día laborable.",
+    "error": "No pudimos enviar tu solicitud. Inténtalo de nuevo, o escríbenos a servicioalcliente@saladinig.com o llámanos al +1 809-530-0101."
   },
   "direct": {
     "title": "Directo, sin formulario",
