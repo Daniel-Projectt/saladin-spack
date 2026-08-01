@@ -52,7 +52,9 @@ const year = new Date().getFullYear();
       <ul class="m-0 list-none space-y-2 p-0 text-[0.95rem]">
         <li><a href={`tel:${company.phoneHref}`} class="text-paper no-underline hover:underline">{company.phone}</a></li>
         <li><a href={`mailto:${company.email}`} class="break-all text-paper no-underline hover:underline">{company.email}</a></li>
-        <li><a href={company.whatsappHref} class="text-paper no-underline hover:underline" rel="noopener">WhatsApp: {company.whatsapp}</a></li>
+        {company.whatsappHref && (
+          <li><a href={company.whatsappHref} class="text-paper no-underline hover:underline" rel="noopener">WhatsApp: {company.whatsapp}</a></li>
+        )}
       </ul>
     </div>
 

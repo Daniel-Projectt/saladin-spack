@@ -47,10 +47,12 @@ const c = lang === 'es' ? commonEs : commonEn;
           <p class="eyebrow text-ink-600">{t.direct.emailLabel}</p>
           <a href={`mailto:${company.email}`} class="break-all text-lg font-bold text-ink-950 no-underline hover:text-press-600">{company.email}</a>
         </li>
-        <li>
-          <p class="eyebrow text-ink-600">{t.direct.whatsappLabel}</p>
-          <a href={company.whatsappHref} rel="noopener" class="text-lg font-bold text-ink-950 no-underline hover:text-press-600">{company.whatsapp}</a>
-        </li>
+        {company.whatsappHref && (
+          <li>
+            <p class="eyebrow text-ink-600">{t.direct.whatsappLabel}</p>
+            <a href={company.whatsappHref} rel="noopener" class="text-lg font-bold text-ink-950 no-underline hover:text-press-600">{company.whatsapp}</a>
+          </li>
+        )}
       </ul>
 
       <h2 class="display display-md mt-10">{t.locations.title}</h2>

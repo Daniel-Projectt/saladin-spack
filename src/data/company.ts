@@ -7,9 +7,12 @@ export const company = {
   squareFeet: '97,000',
   phone: '+1 809-530-0101',
   phoneHref: '+18095300101',
-  /* [REEMPLAZAR] número real de WhatsApp Business */
-  whatsapp: '+1809XXXXXXX',
-  whatsappHref: 'https://wa.me/1809XXXXXXX',
+  /* [REEMPLAZAR-B1] número real de WhatsApp Business. Mientras sea null,
+     el botón flotante y las líneas de WhatsApp NO se renderizan.
+     Al ponerlo (ej. '+1 809-555-1234' y 'https://wa.me/18095551234')
+     todo reaparece solo. */
+  whatsapp: null as string | null,
+  whatsappHref: null as string | null,
   email: 'servicioalcliente@saladinig.com',
   site: 'https://saladinig.com',
   hq: {
