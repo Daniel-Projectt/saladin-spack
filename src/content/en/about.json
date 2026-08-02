@@ -54,7 +54,9 @@
     "eyebrow": "Our mission",
     "title": "Turning vision into value",
     "text": "We create high-quality graphic communications, delivered on time, with great attention to detail and customer service. Our objective is to manufacture solutions that transcend the physical product: goods that add value to your brand and create a lasting connection with your customer.",
-    "values": "Excellence · Loyalty · Teamwork · Responsibility · Trust · Commitment",
+    "valuesLead": "At the heart of everything we do",
+    "valuesList": ["Excellence", "Loyalty", "Teamwork", "Responsibility", "Trust"],
+    "valuesAbove": "And above all, commitment",
     "quote": "“A good name is more desirable than great riches” — Prov. 22:1"
   },
   "locations": {
