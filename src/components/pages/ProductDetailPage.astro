@@ -54,9 +54,11 @@ const jsonLd = [
 
   <!-- INTRO -->
   <section class="mx-auto grid max-w-6xl items-center gap-10 px-4 py-12 md:px-6 md:py-16 lg:grid-cols-[1.2fr_1fr]">
-    <div>
+    {/* min-w-0: sin esto, una palabra larga (MICROCORRUGADO) infla el
+        min-content de la columna y aplasta la de la foto */}
+    <div class="min-w-0">
       {isSpack && <p class="eyebrow text-spack-700">SPACK · {lang === 'es' ? 'Zona Franca Las Américas' : 'Las Américas Free Trade Zone'}</p>}
-      <h1 class="display display-xl mt-2">{p.name}</h1>
+      <h1 class="display display-lg mt-2">{p.name}</h1>
       <p class="mt-6 max-w-2xl text-lg text-ink-600">{p.intro}</p>
       <a href={quoteHref} class="btn btn-press mt-8">{t.quoteCta}</a>
     </div>

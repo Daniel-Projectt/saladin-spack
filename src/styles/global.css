@@ -106,7 +106,11 @@ body {
 .display-xl { font-size: var(--text-display-xl); }
 .display-lg { font-size: var(--text-display-lg); }
 .display-md { font-size: var(--text-display-md); }
-.display-sm { font-size: var(--text-display-sm); }
+.display-sm {
+  font-size: var(--text-display-sm);
+  /* Menos expansión en tarjetas estrechas: MICROCORRUGADO cabe entero */
+  font-variation-settings: 'wdth' 110;
+}
 
 /* Cejilla técnica estilo ticket de imprenta */
 .eyebrow {
@@ -254,6 +258,12 @@ body {
   color: var(--color-paper-white);
 }
 .btn-press:hover { background: var(--color-press-700); }
+
+/* Formulario en modo seguro: el botón no debe parecer clickeable */
+fieldset:disabled .btn {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
 
 .btn-outline-dark {
   border-color: var(--color-ink-950);
