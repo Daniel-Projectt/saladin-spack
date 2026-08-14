@@ -1,8 +1,9 @@
 name: Deploy to GitHub Pages
 
+# Publicación DELIBERADA: el push ya no despliega. Para publicar:
+#   gh workflow run deploy.yml --repo <owner>/saladin-spack
+# o desde la pestaña Actions → Deploy to GitHub Pages → Run workflow.
 on:
-  push:
-    branches: [main]
   workflow_dispatch:
 
 permissions:
