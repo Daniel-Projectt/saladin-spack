@@ -92,6 +92,7 @@ Recomendado: **Cloudflare Pages** (gratis, CDN global, soporta `_redirects`) o *
 - [ ] Probar el formulario RFQ end-to-end (envío real por Formspree) y el botón de WhatsApp con el número real
 - [ ] Correr Lighthouse sobre el sitio publicado (objetivo ≥95 en las 4 categorías) — el sitio es estático, sin JS de framework; lo único externo son los iframes de Google Maps (ya con `loading="lazy"`)
 - [ ] Revisar hreflang en Search Console (ES default + EN)
+- [ ] Sincronizar el case study al portfolio del estudio (`case-study/` → `studio-portfolio`, vía `scripts/sync-case-studies.sh`)
 
 ## Estado de la auditoría (jul-2026)
 
